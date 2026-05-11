@@ -197,7 +197,7 @@ def PatientDashboard():
                            size=12, color="outline"),
                 ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=5),
                 padding=20,
-                alignment=ft.alignment.CENTER,
+                alignment=ft.alignment.center,
             )
         )
     
@@ -261,7 +261,7 @@ def PatientDashboard():
                     ft.Text("No notifications", color="outline"),
                 ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=5),
                 padding=20,
-                alignment=ft.alignment.CENTER,
+                alignment=ft.alignment.center,
             )
         )
     
@@ -383,5 +383,6 @@ def PatientDashboard():
             ),
         ], spacing=15, expand=True),
     ], scroll=ft.ScrollMode.AUTO, spacing=0, expand=True)
+
 
 

@@ -8,3 +8,4 @@ from views.staff.profile_view import StaffProfileView
 __all__ = ['StaffDashboard', 'StaffPatientSearch', 'StaffPatientDetail', 'AllPatientsView', 'HelpDeskView', 'StaffOrderTracking', 'StaffProfileView']
 
 
+

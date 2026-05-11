@@ -275,3 +275,4 @@ def InvoiceDetailView(invoice_id):
     ], scroll=ft.ScrollMode.AUTO, spacing=0)
 
 
+

@@ -44,7 +44,7 @@ def AllPatientsView():
                 ft.Container(
                     content=ft.Icon(ft.icons.PERSON, size=20, color="onSecondaryContainer"),
                     bgcolor="secondaryContainer", width=40, height=40, border_radius=20,
-                    alignment=ft.alignment.CENTER
+                    alignment=ft.alignment.center
                 ),
                 
                 # Name & ID
@@ -114,7 +114,7 @@ def AllPatientsView():
             patients_container.controls.append(
                 ft.Container(
                     content=ft.Text("No customers found matching filter.", color="outline"),
-                    alignment=ft.alignment.CENTER,
+                    alignment=ft.alignment.center,
                     padding=20
                 )
             )
@@ -160,5 +160,6 @@ def AllPatientsView():
     alignment=ft.MainAxisAlignment.START,
     expand=True
     )
+
 
 

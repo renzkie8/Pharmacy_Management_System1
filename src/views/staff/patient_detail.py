@@ -116,3 +116,4 @@ def StaffPatientDetail(patient_id, source="search"):
     ], scroll=ft.ScrollMode.AUTO, spacing=0)
 
 
+

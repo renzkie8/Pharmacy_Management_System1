@@ -391,7 +391,7 @@ def LandingPage(page: ft.Page):
         expand=1,
         bgcolor="surface",
         padding=40,
-        alignment=ft.alignment.CENTER,
+        alignment=ft.alignment.center,
         content=ft.Column([
             ft.Row([ft.Container(expand=True), theme_toggle_btn]),
             ft.Container(expand=True),
@@ -418,7 +418,7 @@ def LandingPage(page: ft.Page):
             colors=["#00564d", "#00897b"]
         ),
         padding=40,
-        alignment=ft.alignment.CENTER,
+        alignment=ft.alignment.center,
         content=ft.Column([
             ft.Text("PharmaOps", size=48, weight="bold", color=ft.colors.WHITE, style=ft.TextStyle(shadow=ft.BoxShadow(blur_radius=10, color=ft.colors.BLACK26))),
             ft.Text("Pharmacy Management System", size=18, color=ft.colors.WHITE70),
@@ -441,5 +441,6 @@ def LandingPage(page: ft.Page):
     )
 
     return view
+
 
 

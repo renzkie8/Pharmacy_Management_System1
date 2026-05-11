@@ -57,7 +57,7 @@ def ReportsView():
             border_radius=12,
             border=ft.border.all(1, "outlineVariant"),
             expand=True,
-            alignment=ft.alignment.CENTER,
+            alignment=ft.alignment.center,
         )
 
     # --- REPORT GENERATION FUNCTIONS ---
@@ -853,5 +853,6 @@ def ReportsView():
             expand=True,
         ),
     ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 
 

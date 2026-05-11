@@ -41,7 +41,7 @@ def HelpDeskView():
                 *[ft.Row([
                     ft.Container(
                         content=ft.Text(str(i+1), size=10, color="white", weight="bold"),
-                        bgcolor="secondary", width=20, height=20, border_radius=10, alignment=ft.alignment.CENTER
+                        bgcolor="secondary", width=20, height=20, border_radius=10, alignment=ft.alignment.center
                     ),
                     ft.Text(step, size=13, expand=True)
                 ], vertical_alignment=ft.CrossAxisAlignment.START) for i, step in enumerate(steps)]
@@ -123,10 +123,11 @@ def HelpDeskView():
                 # Footer info
                 ft.Container(
                     content=ft.Text("Kaputt Kommandos PMS v1.0", size=11, color="outline"),
-                    alignment=ft.alignment.CENTER
+                    alignment=ft.alignment.center
                 )
             ])
         )
     ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 
 

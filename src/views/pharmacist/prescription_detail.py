@@ -395,12 +395,13 @@ def PrescriptionDetailView(prescription_id):
                         ft.Icon(ft.icons.INFO, size=40, color="outline"),
                         ft.Text(f"This prescription is {rx['status']}", size=16, color="outline")
                     ], horizontal_alignment=ft.CrossAxisAlignment.CENTER),
-                    padding=30, alignment=ft.alignment.CENTER
+                    padding=30, alignment=ft.alignment.center
                 )
                 
             ]),
             padding=20
         )
     ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 
 

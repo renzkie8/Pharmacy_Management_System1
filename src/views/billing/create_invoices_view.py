@@ -231,3 +231,4 @@ def CreateInvoicesView():
     ], scroll=ft.ScrollMode.AUTO, spacing=0)
 
 
+

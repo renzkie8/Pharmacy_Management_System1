@@ -57,7 +57,7 @@ def MedicineSearch():
         width=24,
         height=24,
         border_radius=12,
-        alignment=ft.alignment.CENTER,
+        alignment=ft.alignment.center,
     )
     
     def get_cart_count():
@@ -255,7 +255,7 @@ def MedicineSearch():
                     bgcolor="surfaceVariant",
                     border_radius=8,
                     content=ft.Icon(ft.icons.MEDICATION, size=40, color="outline"),
-                    alignment=ft.alignment.CENTER,
+                    alignment=ft.alignment.center,
                 ),
                 # medicine info
                 ft.Column([
@@ -355,7 +355,7 @@ def MedicineSearch():
                         ft.Text("Try a different search term or category", size=14, color="outline"),
                     ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
                     padding=50,
-                    alignment=ft.alignment.CENTER,
+                    alignment=ft.alignment.center,
                 )
             )
         
@@ -415,5 +415,6 @@ def MedicineSearch():
         # Results list
         results_container,
     ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 
 

@@ -208,7 +208,7 @@ def SystemLogs():
                     width=50,
                     height=50,
                     border_radius=25,
-                    alignment=ft.alignment.CENTER,
+                    alignment=ft.alignment.center,
                 ),
                 # Log details
                 ft.Column([
@@ -339,7 +339,7 @@ def SystemLogs():
                         ft.Text("Try adjusting your filters", size=14, color="outline"),
                     ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
                     padding=50,
-                    alignment=ft.alignment.CENTER,
+                    alignment=ft.alignment.center,
                 )
             )
         
@@ -406,5 +406,6 @@ def SystemLogs():
             border=ft.border.all(1, "outlineVariant"),
         ),
     ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 
 

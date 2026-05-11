@@ -286,7 +286,7 @@ def InvoicesListView():
                         ft.Text("Try adjusting your filters or create a new invoice", size=14, color="outline"),
                     ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
                     padding=50,
-                    alignment=ft.alignment.CENTER, 
+                    alignment=ft.alignment.center, 
                 )
             )
         
@@ -350,5 +350,6 @@ def InvoicesListView():
             padding=20,
         ),
     ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 
 

@@ -179,7 +179,7 @@ def CartView():
                     bgcolor="surfaceVariant",
                     border_radius=8,
                     content=ft.Icon(ft.icons.MEDICATION, size=30, color="outline"),
-                    alignment=ft.alignment.CENTER,
+                    alignment=ft.alignment.center,
                 ),
                 # name and price
                 ft.Column([
@@ -419,7 +419,7 @@ def CartView():
                     ),
                 ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
                 padding=80,
-                alignment=ft.alignment.CENTER,
+                alignment=ft.alignment.center,
             ),
         ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=0)
     
@@ -500,6 +500,7 @@ def CartView():
             ),
         ], alignment=ft.MainAxisAlignment.CENTER),
     ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 
 
 

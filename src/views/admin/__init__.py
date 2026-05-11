@@ -6,3 +6,4 @@ from .logs_view import SystemLogs
 __all__ = ['AdminDashboard', 'UserManagement', 'ReportsView', 'SystemLogs']
 
 
+

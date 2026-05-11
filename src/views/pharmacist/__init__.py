@@ -7,3 +7,4 @@ from .profile_view import PharmacistProfileView
 __all__ = ['PharmacistDashboard', 'PrescriptionsView', 'PrescriptionDetailView', 'ReportsView', 'PharmacistMedicineSearch', 'PharmacistProfileView']
 
 
+

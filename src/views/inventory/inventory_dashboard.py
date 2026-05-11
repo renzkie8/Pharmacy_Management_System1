@@ -48,3 +48,4 @@ def InventoryDashboard():
     ], scroll=ft.ScrollMode.AUTO)
 
 
+

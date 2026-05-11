@@ -242,7 +242,7 @@ def StaffProfileView():
                     bgcolor="primaryContainer",
                     border_radius=50,
                     content=ft.Icon(ft.icons.SUPPORT_AGENT, size=50, color="onPrimaryContainer"),
-                    alignment=ft.alignment.CENTER,
+                    alignment=ft.alignment.center,
                 ),
                 ft.Column([
                     txt_name_header,
@@ -342,5 +342,6 @@ def StaffProfileView():
             
         ], spacing=10),
     ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 
 

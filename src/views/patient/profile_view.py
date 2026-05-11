@@ -261,7 +261,7 @@ def ProfileView():
                     bgcolor="primaryContainer",
                     border_radius=50,
                     content=ft.Icon(ft.icons.PERSON, size=50, color="onPrimaryContainer"),
-                    alignment=ft.alignment.CENTER,
+                    alignment=ft.alignment.center,
                 ),
                 ft.Column([
                     txt_name_header,
@@ -367,5 +367,6 @@ def ProfileView():
             ),
         ], spacing=10),
     ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 
 

@@ -448,10 +448,11 @@ def PatientInvoicesView():
                         ft.Text("Invoices will appear here when you place orders", size=14, color="outline"),
                     ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
                     padding=50,
-                    alignment=ft.alignment.CENTER,
+                    alignment=ft.alignment.center,
                 ),
             ]),
         ),
     ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 
 

@@ -132,7 +132,7 @@ def ManageStock():
                    size=14, color="outline", text_align=ft.TextAlign.CENTER),
         ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=5),
         padding=80,
-        alignment=ft.alignment.CENTER,
+        alignment=ft.alignment.center,
         visible=False,
         expand=True,
     )
@@ -322,5 +322,6 @@ def ManageStock():
         ),
         
     ], scroll=ft.ScrollMode.AUTO, expand=True, horizontal_alignment=ft.CrossAxisAlignment.STRETCH)
+
 
 

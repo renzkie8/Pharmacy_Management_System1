@@ -302,8 +302,9 @@ def PatientPrescriptionsView():
                size=14, color="outline", text_align=ft.TextAlign.CENTER),
     ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=5),
     padding=80,
-    alignment=ft.alignment.CENTER,
+    alignment=ft.alignment.center,
         ),
     ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 
 

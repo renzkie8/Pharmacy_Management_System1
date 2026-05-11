@@ -120,7 +120,7 @@ def UserManagement():
                     ft.Container(
                         content=ft.Text("No users found", size=16, color="outline"),
                         padding=50,
-                        alignment=ft.alignment.CENTER,
+                        alignment=ft.alignment.center,
                     )
                 )
                 if e:
@@ -468,5 +468,6 @@ def UserManagement():
         
         users_container,
     ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 
 

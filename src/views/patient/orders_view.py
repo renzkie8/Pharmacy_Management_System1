@@ -243,7 +243,7 @@ def OrdersView():
                         ),
                     ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
                     padding=50,
-                    alignment=ft.alignment.CENTER,
+                    alignment=ft.alignment.center,
                 )
             )
         
@@ -284,5 +284,6 @@ def OrdersView():
         # List of cards
         orders_container,
     ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 
 

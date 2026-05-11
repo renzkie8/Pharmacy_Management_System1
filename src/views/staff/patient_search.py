@@ -35,7 +35,7 @@ def StaffPatientSearch():
                         width=60, height=60,
                         bgcolor="primaryContainer",
                         border_radius=30,
-                        alignment=ft.alignment.CENTER,
+                        alignment=ft.alignment.center,
                     ),
                     ft.Column([
                         ft.Text(patient['full_name'], size=18, weight="bold"),
@@ -93,7 +93,7 @@ def StaffPatientSearch():
                         ft.Icon(ft.icons.SEARCH, size=50, color="outline"),
                         ft.Text("Enter a name or phone number", color="outline"),
                     ], horizontal_alignment=ft.CrossAxisAlignment.CENTER),
-                    alignment=ft.alignment.CENTER,
+                    alignment=ft.alignment.center,
                     padding=50
                 )
             )
@@ -119,7 +119,7 @@ def StaffPatientSearch():
                 results_container.controls.append(
                     ft.Container(
                         content=ft.Text("No customers found.", size=16, color="error"),
-                        alignment=ft.alignment.CENTER,
+                        alignment=ft.alignment.center,
                         padding=20
                     )
                 )
@@ -141,7 +141,7 @@ def StaffPatientSearch():
             results_container.controls.append(
                 ft.Container(
                     content=ft.Text("Error during search. Please try again.", size=14, color="error"),
-                    alignment=ft.alignment.CENTER,
+                    alignment=ft.alignment.center,
                     padding=20
                 )
             )
@@ -181,5 +181,6 @@ def StaffPatientSearch():
     alignment=ft.MainAxisAlignment.START,
     expand=True
     )
+
 
 

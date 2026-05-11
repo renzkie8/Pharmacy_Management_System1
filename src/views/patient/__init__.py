@@ -8,3 +8,4 @@ from .invoices_view import PatientInvoicesView
 __all__ = ['PatientDashboard', 'MedicineSearch', 'CartView', 'OrdersView', 'ProfileView', 'PatientPrescriptionsView', 'PatientInvoicesView']
 
 
+

@@ -65,7 +65,7 @@ def PharmacistMedicineSearch():
                         bgcolor="surfaceVariant",
                         border_radius=10,
                         content=ft.Icon(ft.icons.MEDICATION, size=40, color="primary"),
-                        alignment=ft.alignment.CENTER,
+                        alignment=ft.alignment.center,
                     ),
                     
                     # Medicine details
@@ -283,5 +283,6 @@ def PharmacistMedicineSearch():
             padding=20,
         ),
     ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 
 

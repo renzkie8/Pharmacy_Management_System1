@@ -169,7 +169,7 @@ def PaymentHistoryView():
                         ft.Text("Try adjusting your filters", size=14, color="outline"),
                     ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
                     padding=50,
-                    alignment=ft.alignment.CENTER
+                    alignment=ft.alignment.center
                 )
             )
         
@@ -203,5 +203,6 @@ def PaymentHistoryView():
             padding=20,
         ),
     ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 
 
