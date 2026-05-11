@@ -27,7 +27,7 @@ def NavigationHeader(title, subtitle="", show_back=True, show_forward=False, bac
     if show_back:
         controls.append(
             ft.IconButton(
-                icon=ft.Icons.ARROW_BACK,
+                icon=ft.icons.ARROW_BACK,
                 icon_color="primary",
                 icon_size=28,
                 tooltip="Go Back",
@@ -47,7 +47,7 @@ def NavigationHeader(title, subtitle="", show_back=True, show_forward=False, bac
     if show_forward:
         controls.append(
             ft.IconButton(
-                icon=ft.Icons.ARROW_FORWARD,
+                icon=ft.icons.ARROW_FORWARD,
                 icon_color="primary",
                 icon_size=28,
                 tooltip="Go Forward",

@@ -15,7 +15,7 @@ def StaffPatientSearch():
     search_field = ft.TextField(
         label="Search Customer",
         hint_text="Enter name or phone number...",
-        prefix_icon=ft.Icons.SEARCH,
+        prefix_icon=ft.icons.SEARCH,
         # Visual adjustments for layout consistency
         border_color="primary",
         expand=True,
@@ -31,7 +31,7 @@ def StaffPatientSearch():
                 # Top part: Avatar and Name
                 ft.Row([
                     ft.Container(
-                        content=ft.Icon(ft.Icons.PERSON, size=30, color="onPrimaryContainer"),
+                        content=ft.Icon(ft.icons.PERSON, size=30, color="onPrimaryContainer"),
                         width=60, height=60,
                         bgcolor="primaryContainer",
                         border_radius=30,
@@ -51,7 +51,7 @@ def StaffPatientSearch():
                     
                     # Action indicator: View Details
                     ft.IconButton(
-                        icon=ft.Icons.ARROW_FORWARD,
+                        icon=ft.icons.ARROW_FORWARD,
                         icon_color="primary",
                         on_click=lambda e, pid=patient['id']: e.page.go(f"/staff/patient/{pid}"),
                         tooltip="Open Record"
@@ -63,11 +63,11 @@ def StaffPatientSearch():
                 # Contact and contextual details
                 ft.Row([
                     ft.Column([
-                        ft.Row([ft.Icon(ft.Icons.PHONE, size=16, color="outline"), ft.Text(patient['phone'] or "N/A", size=13)], spacing=8),
-                        ft.Row([ft.Icon(ft.Icons.EMAIL, size=16, color="outline"), ft.Text(patient['email'] or "N/A", size=13)], spacing=8),
+                        ft.Row([ft.Icon(ft.icons.PHONE, size=16, color="outline"), ft.Text(patient['phone'] or "N/A", size=13)], spacing=8),
+                        ft.Row([ft.Icon(ft.icons.EMAIL, size=16, color="outline"), ft.Text(patient['email'] or "N/A", size=13)], spacing=8),
                     ]),
                     ft.Column([
-                        ft.Row([ft.Icon(ft.Icons.CALENDAR_TODAY, size=16, color="outline"), ft.Text(f"Reg: {patient['created_at'][:10]}", size=13)], spacing=8),
+                        ft.Row([ft.Icon(ft.icons.CALENDAR_TODAY, size=16, color="outline"), ft.Text(f"Reg: {patient['created_at'][:10]}", size=13)], spacing=8),
                     ])
                 ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
                 
@@ -90,7 +90,7 @@ def StaffPatientSearch():
             results_container.controls.append(
                 ft.Container(
                     content=ft.Column([
-                        ft.Icon(ft.Icons.SEARCH, size=50, color="outline"),
+                        ft.Icon(ft.icons.SEARCH, size=50, color="outline"),
                         ft.Text("Enter a name or phone number", color="outline"),
                     ], horizontal_alignment=ft.CrossAxisAlignment.CENTER),
                     alignment=ft.alignment.center,
@@ -160,7 +160,7 @@ def StaffPatientSearch():
                     search_field,
                     ft.ElevatedButton(
                         "Search", 
-                        icon=ft.Icons.SEARCH, 
+                        icon=ft.icons.SEARCH, 
                         height=50, 
                         bgcolor="primary", 
                         color="onPrimary",

@@ -133,10 +133,10 @@ def BillingReportsView():
                         
                         # Render volume metrics
                         ft.Row([
-                            create_metric_card("Total Invoices", total_invoices, ft.Icons.RECEIPT, "primary"),
-                            create_metric_card("Paid", paid_count, ft.Icons.CHECK_CIRCLE, "primary"),
-                            create_metric_card("Unpaid", unpaid_count, ft.Icons.PENDING, "error"),
-                            create_metric_card("Cancelled", cancelled_count, ft.Icons.CANCEL, "outline"),
+                            create_metric_card("Total Invoices", total_invoices, ft.icons.RECEIPT, "primary"),
+                            create_metric_card("Paid", paid_count, ft.icons.CHECK_CIRCLE, "primary"),
+                            create_metric_card("Unpaid", unpaid_count, ft.icons.PENDING, "error"),
+                            create_metric_card("Cancelled", cancelled_count, ft.icons.CANCEL, "outline"),
                         ], spacing=15, wrap=True),
                         
                         ft.Container(height=15),
@@ -278,7 +278,7 @@ def BillingReportsView():
             content=ft.Column([
                 # Render parameter controls
                 ft.Row([
-                    ft.Icon(ft.Icons.DATE_RANGE, color="primary", size=28),
+                    ft.Icon(ft.icons.DATE_RANGE, color="primary", size=28),
                     ft.Text("Select Report Period", size=20, weight="bold"),
                 ], spacing=10),
                 
@@ -288,7 +288,7 @@ def BillingReportsView():
                     date_to,
                     ft.ElevatedButton(
                         "Generate Report",
-                        icon=ft.Icons.ANALYTICS,
+                        icon=ft.icons.ANALYTICS,
                         bgcolor="primary",
                         color="white",
                         on_click=generate_report,

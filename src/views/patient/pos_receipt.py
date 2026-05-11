@@ -109,7 +109,7 @@ def POSReceiptView(order_id: int):
             # Pharmacy Header
             ft.Container(
                 content=ft.Column([
-                    ft.Icon(ft.Icons.LOCAL_PHARMACY, size=40, color="primary"),
+                    ft.Icon(ft.icons.LOCAL_PHARMACY, size=40, color="primary"),
                     ft.Text("PharmaOps", size=24, weight="w900", color="primary"),
                     ft.Text("Official Receipt", size=12, color="outline"),
                     ft.Text("123 Healthcare Blvd, Medical District", size=10, color="outline"),
@@ -159,7 +159,7 @@ def POSReceiptView(order_id: int):
             # Pending Verification Notice
             *( [ft.Container(
                 content=ft.Row([
-                    ft.Icon(ft.Icons.INFO_OUTLINE, size=16, color="orange"),
+                    ft.Icon(ft.icons.INFO_OUTLINE, size=16, color="orange"),
                     ft.Text("Discount pending pharmacist verification. Final amount may adjust.", size=10, color="orange", italic=True, expand=True)
                 ], spacing=8),
                 padding=ft.padding.only(top=10, bottom=10),
@@ -191,7 +191,7 @@ def POSReceiptView(order_id: int):
         content=ft.Column([
             ft.Row([
                 ft.IconButton(
-                    icon=ft.Icons.ARROW_BACK_IOS_NEW,
+                    icon=ft.icons.ARROW_BACK_IOS_NEW,
                     icon_color="primary",
                     on_click=lambda e: e.page.go("/patient/orders"),
                     tooltip="Back to Orders"

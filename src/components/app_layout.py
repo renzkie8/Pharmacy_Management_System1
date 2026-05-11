@@ -15,10 +15,10 @@ class AppLayout(ft.Row):
         def toggle_theme(e):
             if self.page.theme_mode == ft.ThemeMode.LIGHT:
                 self.page.theme_mode = ft.ThemeMode.DARK
-                e.control.icon = ft.Icons.DARK_MODE
+                e.control.icon = ft.icons.DARK_MODE
             else:
                 self.page.theme_mode = ft.ThemeMode.LIGHT
-                e.control.icon = ft.Icons.LIGHT_MODE
+                e.control.icon = ft.icons.LIGHT_MODE
             self.page.update()
 
         # Contextualize application state
@@ -77,7 +77,7 @@ class AppLayout(ft.Row):
                 controls=[
                     # System traversal buttons
                     ft.IconButton(
-                        icon=ft.Icons.ARROW_BACK,
+                        icon=ft.icons.ARROW_BACK,
                         icon_size=24,
                         tooltip="Go Back",
                         on_click=go_back
@@ -90,19 +90,19 @@ class AppLayout(ft.Row):
                     # Render general purpose actions
                     ft.Row([
                         ft.IconButton(
-                            icon=ft.Icons.HOME,
+                            icon=ft.icons.HOME,
                             icon_size=24,
                             tooltip="Go to Dashboard",
                             on_click=go_home
                         ),
                         ft.IconButton(
-                            icon=ft.Icons.REFRESH,
+                            icon=ft.icons.REFRESH,
                             icon_size=24,
                             tooltip="Refresh Page",
                             on_click=refresh_page
                         ),
                         ft.IconButton(
-                            ft.Icons.DARK_MODE,
+                            ft.icons.DARK_MODE,
                             icon_size=24,
                             tooltip="Toggle Theme",
                             on_click=toggle_theme
@@ -143,7 +143,7 @@ class AppLayout(ft.Row):
     def get_destinations(self):
         user = AppState.get_user()
         role = user['role']
-        dests = [ft.NavigationRailDestination(icon=ft.Icons.DASHBOARD, label="Dashboard")]
+        dests = [ft.NavigationRailDestination(icon=ft.icons.DASHBOARD, label="Dashboard")]
         
         if role == "Patient":
             # Execute metric aggregation for user view
@@ -160,42 +160,42 @@ class AppLayout(ft.Row):
                 pass
             
             # Base navigation modules
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.SEARCH, label="Search Meds"))
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.SEARCH, label="Search Meds"))
             
             # Inject context into component attributes
             cart_label = f"My Cart ({cart_count})" if cart_count > 0 else "My Cart"
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.SHOPPING_CART, label=cart_label))
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.SHOPPING_CART, label=cart_label))
             
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.RECEIPT_LONG, label="My Orders"))
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.RECEIPT_LONG, label="My Bills")) 
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.PERSON, label="My Profile")) 
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.RECEIPT_LONG, label="My Orders"))
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.RECEIPT_LONG, label="My Bills")) 
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.PERSON, label="My Profile")) 
             
         elif role == "Pharmacist":
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.MEDICAL_SERVICES, label="Prescriptions"))
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.VERIFIED, label="Verify Orders"))
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.PERSON, label="My Profile"))
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.MEDICAL_SERVICES, label="Prescriptions"))
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.VERIFIED, label="Verify Orders"))
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.PERSON, label="My Profile"))
         elif role == "Inventory":
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.INVENTORY, label="Manage Stock"))
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.PERSON, label="My Profile"))
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.INVENTORY, label="Manage Stock"))
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.PERSON, label="My Profile"))
         elif role == "Billing":
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.RECEIPT_LONG, label="Invoices"))
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.VERIFIED, label="Verify Orders"))
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.PERSON, label="My Profile"))
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.RECEIPT_LONG, label="Invoices"))
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.VERIFIED, label="Verify Orders"))
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.PERSON, label="My Profile"))
         elif role == "Admin":
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.PEOPLE, label="Users"))
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.ANALYTICS, label="Reports"))
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.HISTORY, label="Logs"))
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.INVENTORY, label="Manage Stock"))
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.PEOPLE, label="Users"))
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.ANALYTICS, label="Reports"))
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.HISTORY, label="Logs"))
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.INVENTORY, label="Manage Stock"))
         elif role == "Staff":
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.PERSON_SEARCH, label="Find Customer"))
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.PEOPLE, label="All Customers"))  
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.VERIFIED, label="Verify Orders"))
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.HELP, label="Help Desk"))  
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.PERSON, label="My Profile"))
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.PERSON_SEARCH, label="Find Customer"))
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.PEOPLE, label="All Customers"))  
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.VERIFIED, label="Verify Orders"))
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.HELP, label="Help Desk"))  
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.PERSON, label="My Profile"))
         
         # Add persistent exit component
         if role != "Patient":
-            dests.append(ft.NavigationRailDestination(icon=ft.Icons.LOGOUT, label="Logout"))
+            dests.append(ft.NavigationRailDestination(icon=ft.icons.LOGOUT, label="Logout"))
         
         return dests
 
@@ -220,7 +220,7 @@ class AppLayout(ft.Row):
             confirm_dialog = ft.AlertDialog(
                 modal=True,
                 title=ft.Row([
-                    ft.Icon(ft.Icons.LOGOUT, color="error"),
+                    ft.Icon(ft.icons.LOGOUT, color="error"),
                     ft.Text("Confirm Logout")
                 ]),
                 content=ft.Text("Are you sure you want to logout?", size=14),
@@ -289,7 +289,7 @@ class AppLayout(ft.Row):
                         cart_label = f"My Cart ({cart_count})" if cart_count > 0 else "My Cart"
                         # Update the destination label
                         self.rail.destinations[i] = ft.NavigationRailDestination(
-                            icon=ft.Icons.SHOPPING_CART, 
+                            icon=ft.icons.SHOPPING_CART, 
                             label=cart_label
                         )
                         self.page.update()

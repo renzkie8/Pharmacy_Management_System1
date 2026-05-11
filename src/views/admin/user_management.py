@@ -13,7 +13,7 @@ def UserManagement():
     search_field = ft.TextField(
         label="Search Users",
         hint_text="Search by username or name...",
-        prefix_icon=ft.Icons.SEARCH,
+        prefix_icon=ft.icons.SEARCH,
         border_color="primary", 
         width=300,
     )
@@ -287,7 +287,7 @@ def UserManagement():
         # Configure record action controls
         action_buttons = [
             ft.IconButton(
-                icon=ft.Icons.EDIT,
+                icon=ft.icons.EDIT,
                 icon_color="primary",
                 tooltip="Edit User",
                 on_click=edit_user,
@@ -296,13 +296,13 @@ def UserManagement():
 
         if user_status == 'Pending':
             action_buttons.insert(0, ft.IconButton(
-                icon=ft.Icons.CHECK_CIRCLE,
+                icon=ft.icons.CHECK_CIRCLE,
                 icon_color="#4CAF50",
                 tooltip="Approve User",
                 on_click=approve_user,
             ))
             action_buttons.insert(1, ft.IconButton(
-                icon=ft.Icons.CANCEL,
+                icon=ft.icons.CANCEL,
                 icon_color="#F44336",
                 tooltip="Reject User",
                 on_click=reject_user,
@@ -310,7 +310,7 @@ def UserManagement():
 
         action_buttons.append(
             ft.IconButton(
-                icon=ft.Icons.DELETE,
+                icon=ft.icons.DELETE,
                 icon_color="grey" if is_delete_disabled else "error",
                 disabled=is_delete_disabled,
                 tooltip="Cannot delete the last user of this role" if is_delete_disabled else "Delete User",
@@ -450,14 +450,14 @@ def UserManagement():
             status_filter,
             ft.ElevatedButton(
                 "Search",
-                icon=ft.Icons.SEARCH,
+                icon=ft.icons.SEARCH,
                 bgcolor="primary",
                 color="white",
                 on_click=load_users,
             ),
             ft.ElevatedButton(
                 "Add User",
-                icon=ft.Icons.ADD,
+                icon=ft.icons.ADD,
                 bgcolor="secondary",
                 color="white",
                 on_click=add_user,

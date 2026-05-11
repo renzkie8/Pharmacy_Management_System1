@@ -183,7 +183,7 @@ def CreateInvoicesView():
         ft.Container(
             content=ft.Column([
                 ft.Container(
-                    content=ft.Row([ft.Icon(ft.Icons.INFO_OUTLINE, color="primary"), ft.Text("Create a new invoice for a customer. You can link it to an existing order or enter manual amounts.", size=13, expand=True)], spacing=10),
+                    content=ft.Row([ft.Icon(ft.icons.INFO_OUTLINE, color="primary"), ft.Text("Create a new invoice for a customer. You can link it to an existing order or enter manual amounts.", size=13, expand=True)], spacing=10),
                     padding=15, bgcolor=ft.colors.with_opacity(0.1, "primary"), border_radius=8
                 ),
                 
@@ -211,14 +211,14 @@ def CreateInvoicesView():
                 
                 ft.Row([
                     ft.ElevatedButton(
-                        content=ft.Row([ft.Icon(ft.Icons.SAVE, color="white"), ft.Text("Create Invoice", color="white")], spacing=10),
+                        content=ft.Row([ft.Icon(ft.icons.SAVE, color="white"), ft.Text("Create Invoice", color="white")], spacing=10),
                         bgcolor="primary",
                         style=ft.ButtonStyle(padding=15, shape=ft.RoundedRectangleBorder(radius=8)),
                         on_click=create_invoice,
                     ),
                     ft.OutlinedButton(
                         "Cancel",
-                        icon=ft.Icons.CANCEL,
+                        icon=ft.icons.CANCEL,
                         # Navigation fallback
                         on_click=lambda e: e.page.go("/dashboard"),
                         style=ft.ButtonStyle(padding=15, shape=ft.RoundedRectangleBorder(radius=8)),

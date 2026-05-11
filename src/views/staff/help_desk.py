@@ -57,7 +57,7 @@ def HelpDeskView():
     def create_contact_card(role, email, ext):
         return ft.Container(
             content=ft.Column([
-                ft.Icon(ft.Icons.SUPPORT_AGENT, size=30, color="primary"),
+                ft.Icon(ft.icons.SUPPORT_AGENT, size=30, color="primary"),
                 ft.Text(role, weight="bold", size=14),
                 ft.Text(email, size=12, color="outline"),
                 ft.Text(f"Ext: {ext}", size=12, weight="bold", color="secondary"),

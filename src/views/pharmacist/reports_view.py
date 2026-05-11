@@ -98,10 +98,10 @@ def ReportsView():
                 # Summary statistics
                 ft.Text("Prescription Summary", size=24, weight="bold"),
                 ft.Row([
-                    create_stat_box("Total Prescriptions", total, ft.Icons.RECEIPT_LONG, "primary"),
-                    create_stat_box("Pending", pending, ft.Icons.PENDING, "tertiary"),
-                    create_stat_box("Approved", approved, ft.Icons.CHECK_CIRCLE, "primary"),
-                    create_stat_box("Rejected", rejected, ft.Icons.CANCEL, "error"),
+                    create_stat_box("Total Prescriptions", total, ft.icons.RECEIPT_LONG, "primary"),
+                    create_stat_box("Pending", pending, ft.icons.PENDING, "tertiary"),
+                    create_stat_box("Approved", approved, ft.icons.CHECK_CIRCLE, "primary"),
+                    create_stat_box("Rejected", rejected, ft.icons.CANCEL, "error"),
                 ], spacing=15),
                 
                 ft.Container(height=20),
@@ -195,21 +195,21 @@ def ReportsView():
                 ft.Row([
                     ft.ElevatedButton(
                         "Export as PDF",
-                        icon=ft.Icons.PICTURE_AS_PDF,
+                        icon=ft.icons.PICTURE_AS_PDF,
                         bgcolor="error",
                         color="white",
                         on_click=lambda e: export_report(e, "pdf"),
                     ),
                     ft.ElevatedButton(
                         "Export as CSV",
-                        icon=ft.Icons.TABLE_CHART,
+                        icon=ft.icons.TABLE_CHART,
                         bgcolor="primary",
                         color="white",
                         on_click=lambda e: export_report(e, "csv"),
                     ),
                     ft.OutlinedButton(
                         "Print Report",
-                        icon=ft.Icons.PRINT,
+                        icon=ft.icons.PRINT,
                         on_click=lambda e: print_report(e),
                     ),
                 ], spacing=10),
@@ -222,7 +222,7 @@ def ReportsView():
             report_container.controls.append(
                 ft.Container(
                     content=ft.Column([
-                        ft.Icon(ft.Icons.ERROR_OUTLINE, size=60, color="error"),
+                        ft.Icon(ft.icons.ERROR_OUTLINE, size=60, color="error"),
                         ft.Text("Error generating report", size=18, weight="bold"),
                         ft.Text(str(ex), size=12, color="outline"),
                     ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
@@ -277,7 +277,7 @@ def ReportsView():
             content=ft.Column([
                 # Filters
                 ft.Row([
-                    ft.Icon(ft.Icons.DATE_RANGE, color="primary", size=32),
+                    ft.Icon(ft.icons.DATE_RANGE, color="primary", size=32),
                     ft.Text("Report Date Range", size=20, weight="bold"),
                 ], spacing=10),
                 
@@ -287,7 +287,7 @@ def ReportsView():
                     date_to,
                     ft.ElevatedButton(
                         "Generate Report",
-                        icon=ft.Icons.ANALYTICS,
+                        icon=ft.icons.ANALYTICS,
                         bgcolor="primary",
                         color="white",
                         on_click=generate_report,

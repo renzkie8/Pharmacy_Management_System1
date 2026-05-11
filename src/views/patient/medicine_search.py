@@ -17,7 +17,7 @@ def MedicineSearch():
     # Initialize text input
     search_field = ft.TextField(
         hint_text="Search medicines by name...",
-        prefix_icon=ft.Icons.SEARCH,
+        prefix_icon=ft.icons.SEARCH,
         border_color="primary", # need this so it shows up in dark mode
         expand=True,
     )
@@ -223,7 +223,7 @@ def MedicineSearch():
                 ft.TextButton("Close", on_click=lambda e: close_dialog(e)),
                 ft.ElevatedButton(
                     "Add to Cart",
-                    icon=ft.Icons.ADD_SHOPPING_CART,
+                    icon=ft.icons.ADD_SHOPPING_CART,
                     bgcolor="primary",
                     color="onPrimary",
                     on_click=lambda e: [
@@ -254,7 +254,7 @@ def MedicineSearch():
                     height=80,
                     bgcolor="surfaceVariant",
                     border_radius=8,
-                    content=ft.Icon(ft.Icons.MEDICATION, size=40, color="outline"),
+                    content=ft.Icon(ft.icons.MEDICATION, size=40, color="outline"),
                     alignment=ft.alignment.center,
                 ),
                 # medicine info
@@ -284,7 +284,7 @@ def MedicineSearch():
                 ft.Column([
                     # Add to Cart Button (Retained)
                     ft.IconButton(
-                        icon=ft.Icons.ADD_SHOPPING_CART,
+                        icon=ft.icons.ADD_SHOPPING_CART,
                         icon_color="onPrimary",
                         bgcolor="primary",
                         disabled=med['stock'] <= 0,
@@ -350,7 +350,7 @@ def MedicineSearch():
             results_container.controls.append(
                 ft.Container(
                     content=ft.Column([
-                        ft.Icon(ft.Icons.SEARCH_OFF, size=80, color="outline"),
+                        ft.Icon(ft.icons.SEARCH_OFF, size=80, color="outline"),
                         ft.Text("No medicines found", size=18, color="outline"),
                         ft.Text("Try a different search term or category", size=14, color="outline"),
                     ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
@@ -376,7 +376,7 @@ def MedicineSearch():
         # Cart icon with badge on the right
         ft.Stack([
             ft.IconButton(
-                ft.Icons.SHOPPING_CART,
+                ft.icons.SHOPPING_CART,
                 icon_size=28,
                 on_click=view_cart,
                 tooltip="View Cart",
@@ -400,7 +400,7 @@ def MedicineSearch():
             category_dropdown,
             ft.ElevatedButton(
                 "Search",
-                icon=ft.Icons.SEARCH,
+                icon=ft.icons.SEARCH,
                 on_click=load_medicines,
                 bgcolor="primary",
                 color="onPrimary",

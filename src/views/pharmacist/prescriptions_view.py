@@ -31,7 +31,7 @@ def PrescriptionsView():
     # Search input configuration
     search_field = ft.TextField(
         hint_text="Search by customer name or prescription ID...",
-        prefix_icon=ft.Icons.SEARCH,
+        prefix_icon=ft.icons.SEARCH,
         border_color="primary",
         expand=True,
     )
@@ -151,14 +151,14 @@ def PrescriptionsView():
                 
                 # Submission Timestamp
                 ft.Row([
-                    ft.Icon(ft.Icons.ACCESS_TIME, size=14, color="outline"),
+                    ft.Icon(ft.icons.ACCESS_TIME, size=14, color="outline"),
                     ft.Text(f"Submitted: {rx['created_at']}", size=12, color="outline"),
                 ], spacing=5),
                 
                 # Review Notes Area
                 ft.Container(
                     content=ft.Row([
-                        ft.Icon(ft.Icons.NOTE, size=16, color="tertiary"),
+                        ft.Icon(ft.icons.NOTE, size=16, color="tertiary"),
                         ft.Text(rx['notes'], size=12, italic=True),
                     ], spacing=5),
                     visible=bool(rx.get('notes')),
@@ -171,20 +171,20 @@ def PrescriptionsView():
                 ft.Row([
                     ft.ElevatedButton(
                         "Review Details",
-                        icon=ft.Icons.VISIBILITY,
+                        icon=ft.icons.VISIBILITY,
                         bgcolor="primary",
                         color="onPrimary",
                         on_click=lambda e, rx_id=rx['id']: e.page.go(f"/pharmacist/prescription/{rx_id}"),
                     ),
                     ft.OutlinedButton(
                         "Quick Approve",
-                        icon=ft.Icons.CHECK_CIRCLE,
+                        icon=ft.icons.CHECK_CIRCLE,
                         disabled=rx['status'] != "Pending",
                         on_click=lambda e, rx_id=rx['id']: quick_approve(e, rx_id),
                     ),
                     ft.OutlinedButton(
                         "Quick Reject",
-                        icon=ft.Icons.CANCEL,
+                        icon=ft.icons.CANCEL,
                         disabled=rx['status'] != "Pending",
                         on_click=lambda e, rx_id=rx['id']: quick_reject(e, rx_id),
                     ),
@@ -258,7 +258,7 @@ def PrescriptionsView():
             prescriptions_container.controls.append(
                 ft.Container(
                     content=ft.Column([
-                        ft.Icon(ft.Icons.SEARCH_OFF, size=80, color="outline"),
+                        ft.Icon(ft.icons.SEARCH_OFF, size=80, color="outline"),
                         ft.Text("No prescriptions found", size=18, color="outline"),
                         ft.Text("Try adjusting your filters", size=14, color="outline"),
                     ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
@@ -294,7 +294,7 @@ def PrescriptionsView():
                     status_filter,
                     ft.ElevatedButton(
                         "Filter",
-                        icon=ft.Icons.FILTER_ALT,
+                        icon=ft.icons.FILTER_ALT,
                         bgcolor="primary",
                         color="onPrimary",
                         on_click=load_prescriptions,

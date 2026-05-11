@@ -39,7 +39,7 @@ def SystemLogs():
     
     search_field = ft.TextField(
         hint_text="Search logs...",
-        prefix_icon=ft.Icons.SEARCH,
+        prefix_icon=ft.icons.SEARCH,
         border_color="primary", # Adjust visibility parameter
         width=300,
     )
@@ -67,7 +67,7 @@ def SystemLogs():
                 "action": f"New {'Customer' if user[3] == 'Patient' else user[3]} Registered",
                 "details": f"User '{user[2] or user[1]}' created account",
                 "type": "users",
-                "icon": ft.Icons.PERSON_ADD,
+                "icon": ft.icons.PERSON_ADD,
                 "color": "primary",
             })
         
@@ -84,7 +84,7 @@ def SystemLogs():
         for rx in prescriptions:
             status = rx[1]
             color = "primary" if status == "Approved" else "tertiary" if status == "Pending" else "error"
-            icon = ft.Icons.CHECK_CIRCLE if status == "Approved" else ft.Icons.PENDING if status == "Pending" else ft.Icons.CANCEL
+            icon = ft.icons.CHECK_CIRCLE if status == "Approved" else ft.icons.PENDING if status == "Pending" else ft.icons.CANCEL
             
             logs.append({
                 "timestamp": rx[2],
@@ -116,7 +116,7 @@ def SystemLogs():
                 "action": f"Order #{order[0]} - {status}",
                 "details": f"{order[5] or order[4]} placed order for ₱{order[3]:.2f}",
                 "type": "orders",
-                "icon": ft.Icons.SHOPPING_CART,
+                "icon": ft.icons.SHOPPING_CART,
                 "color": color,
             })
         
@@ -136,7 +136,7 @@ def SystemLogs():
                 "action": "Medicine Added",
                 "details": f"{med[1]} added to inventory (Stock: {med[2]})",
                 "type": "inventory",
-                "icon": ft.Icons.INVENTORY,
+                "icon": ft.icons.INVENTORY,
                 "color": "secondary",
             })
         
@@ -157,7 +157,7 @@ def SystemLogs():
                 "action": f"Invoice {inv[1]} Generated",
                 "details": f"Invoice for ₱{inv[2]:.2f} - Status: {inv[3]}",
                 "type": "billing",
-                "icon": ft.Icons.RECEIPT,
+                "icon": ft.icons.RECEIPT,
                 "color": "tertiary",
             })
             
@@ -177,7 +177,7 @@ def SystemLogs():
                     "action": act[2],
                     "details": act[3],
                     "type": "system",
-                    "icon": ft.Icons.SETTINGS,
+                    "icon": ft.icons.SETTINGS,
                     "color": "secondary",
                 })
         except:
@@ -223,9 +223,9 @@ def SystemLogs():
                     ], spacing=10),
                     ft.Text(log['details'], size=13, color="outline"),
                     ft.Row([
-                        ft.Icon(ft.Icons.PERSON, size=14, color="outline"),
+                        ft.Icon(ft.icons.PERSON, size=14, color="outline"),
                         ft.Text(log['user'], size=12, color="outline"),
-                        ft.Icon(ft.Icons.ACCESS_TIME, size=14, color="outline"),
+                        ft.Icon(ft.icons.ACCESS_TIME, size=14, color="outline"),
                         ft.Text(time_ago, size=12, color="outline"),
                     ], spacing=5),
                 ], spacing=5, expand=True),
@@ -334,7 +334,7 @@ def SystemLogs():
             logs_container.controls.append(
                 ft.Container(
                     content=ft.Column([
-                        ft.Icon(ft.Icons.SEARCH_OFF, size=80, color="outline"),
+                        ft.Icon(ft.icons.SEARCH_OFF, size=80, color="outline"),
                         ft.Text("No logs found", size=18, color="outline"),
                         ft.Text("Try adjusting your filters", size=14, color="outline"),
                     ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
@@ -374,7 +374,7 @@ def SystemLogs():
                 ft.Row([
                     ft.ElevatedButton(
                         "Refresh Logs",
-                        icon=ft.Icons.REFRESH,
+                        icon=ft.icons.REFRESH,
                         bgcolor="primary",
                         color="onPrimary",
                         on_click=load_logs,
@@ -394,7 +394,7 @@ def SystemLogs():
         ft.Container(
             content=ft.Column([
                 ft.Row([
-                    ft.Icon(ft.Icons.TIMELINE, color="primary", size=24),
+                    ft.Icon(ft.icons.TIMELINE, color="primary", size=24),
                     ft.Text("Activity Timeline", size=20, weight="bold"),
                 ], spacing=10),
                 ft.Divider(height=20),

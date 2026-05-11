@@ -11,7 +11,7 @@ def PharmacistMedicineSearch():
     
     search_field = ft.TextField(
         hint_text="Search medicines by name...",
-        prefix_icon=ft.Icons.SEARCH,
+        prefix_icon=ft.icons.SEARCH,
         border_color="outline",
         expand=True,
     )
@@ -64,7 +64,7 @@ def PharmacistMedicineSearch():
                         height=80,
                         bgcolor="surfaceVariant",
                         border_radius=10,
-                        content=ft.Icon(ft.Icons.MEDICATION, size=40, color="primary"),
+                        content=ft.Icon(ft.icons.MEDICATION, size=40, color="primary"),
                         alignment=ft.alignment.center,
                     ),
                     
@@ -228,7 +228,7 @@ def PharmacistMedicineSearch():
             results_container.controls.append(
                 ft.Container(
                     content=ft.Column([
-                        ft.Icon(ft.Icons.SEARCH_OFF, size=80, color="outline"),
+                        ft.Icon(ft.icons.SEARCH_OFF, size=80, color="outline"),
                         ft.Text("No medicines found", size=18, color="outline"),
                         ft.Text("Try adjusting your search criteria", size=14, color="outline"),
                     ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
@@ -262,13 +262,13 @@ def PharmacistMedicineSearch():
                     stock_filter,
                     ft.ElevatedButton(
                         "Search",
-                        icon=ft.Icons.SEARCH,
+                        icon=ft.icons.SEARCH,
                         bgcolor="primary",
                         color="white",
                         on_click=load_medicines,
                     ),
                     ft.IconButton(
-                        icon=ft.Icons.REFRESH,
+                        icon=ft.icons.REFRESH,
                         icon_color="primary",
                         tooltip="Refresh",
                         on_click=load_medicines,

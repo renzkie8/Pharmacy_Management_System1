@@ -175,7 +175,7 @@ def PrescriptionDetailView(prescription_id):
             # Render edit mode layout
             prescription_container.controls = [
                 ft.Row([
-                    ft.Icon(ft.Icons.MEDICATION, color="primary", size=32),
+                    ft.Icon(ft.icons.MEDICATION, color="primary", size=32),
                     ft.Column([
                         ft.Text("Medicine", size=12, color="outline"),
                         medicine_field,
@@ -195,15 +195,15 @@ def PrescriptionDetailView(prescription_id):
                 
                 ft.Container(height=20),
                 ft.Row([
-                    ft.ElevatedButton("Save Changes", icon=ft.Icons.SAVE, bgcolor="primary", color="white", on_click=save_prescription_details),
-                    ft.OutlinedButton("Cancel", icon=ft.Icons.CANCEL, on_click=toggle_edit_mode),
+                    ft.ElevatedButton("Save Changes", icon=ft.icons.SAVE, bgcolor="primary", color="white", on_click=save_prescription_details),
+                    ft.OutlinedButton("Cancel", icon=ft.icons.CANCEL, on_click=toggle_edit_mode),
                 ], spacing=10),
             ]
         else:
             # Render view mode layout
             prescription_container.controls = [
                 ft.Row([
-                    ft.Icon(ft.Icons.MEDICATION, color="primary", size=32),
+                    ft.Icon(ft.icons.MEDICATION, color="primary", size=32),
                     ft.Column([
                         ft.Text("Medicine", size=12, color="outline"),
                         ft.Text(rx['medicine_name'], size=20, weight="bold"),
@@ -247,7 +247,7 @@ def PrescriptionDetailView(prescription_id):
                 # UI Component: Notes Display Area
                 ft.Container(
                     content=ft.Column([
-                        ft.Row([ft.Icon(ft.Icons.NOTE_ALT, size=20, color="tertiary"), ft.Text("Customer/Doctor Notes", weight="bold")]),
+                        ft.Row([ft.Icon(ft.icons.NOTE_ALT, size=20, color="tertiary"), ft.Text("Customer/Doctor Notes", weight="bold")]),
                         ft.Text(rx['notes'] or "No additional notes", italic=True),
                     ], spacing=5),
                     bgcolor=ft.colors.with_opacity(0.05, "tertiary"),
@@ -354,9 +354,9 @@ def PrescriptionDetailView(prescription_id):
                 # Patient Identity Section
                 ft.Text("Customer Information", size=20, weight="bold"),
                 ft.Row([
-                    info_card("Customer Name", rx['patient_name'], ft.Icons.PERSON, "primary"),
-                    info_card("Contact", rx['patient_email'], ft.Icons.EMAIL, "secondary"),
-                    info_card("Phone", rx['patient_phone'], ft.Icons.PHONE, "tertiary"),
+                    info_card("Customer Name", rx['patient_name'], ft.icons.PERSON, "primary"),
+                    info_card("Contact", rx['patient_email'], ft.icons.EMAIL, "secondary"),
+                    info_card("Phone", rx['patient_phone'], ft.icons.PHONE, "tertiary"),
                 ], spacing=15),
                 
                 ft.Container(height=20),
@@ -365,7 +365,7 @@ def PrescriptionDetailView(prescription_id):
                 ft.Row([
                     ft.Text("Prescription Details", size=20, weight="bold", expand=True),
                     # Contextual action visibility
-                    ft.IconButton(icon=ft.Icons.EDIT, tooltip="Edit Details", on_click=toggle_edit_mode, visible=rx['status']=='Pending')
+                    ft.IconButton(icon=ft.icons.EDIT, tooltip="Edit Details", on_click=toggle_edit_mode, visible=rx['status']=='Pending')
                 ]),
                 
                 # Dynamic component mounting area
@@ -383,16 +383,16 @@ def PrescriptionDetailView(prescription_id):
                         pharmacist_notes_field,
                         ft.Container(height=10),
                         ft.Row([
-                            ft.ElevatedButton("Approve Prescription", icon=ft.Icons.CHECK_CIRCLE, bgcolor="primary", color="white", on_click=approve_prescription),
-                            ft.ElevatedButton("Reject Prescription", icon=ft.Icons.CANCEL, bgcolor="error", color="white", on_click=reject_prescription),
-                            ft.OutlinedButton("Cancel", icon=ft.Icons.ARROW_BACK, on_click=lambda e: e.page.go("/pharmacist/prescriptions"))
+                            ft.ElevatedButton("Approve Prescription", icon=ft.icons.CHECK_CIRCLE, bgcolor="primary", color="white", on_click=approve_prescription),
+                            ft.ElevatedButton("Reject Prescription", icon=ft.icons.CANCEL, bgcolor="error", color="white", on_click=reject_prescription),
+                            ft.OutlinedButton("Cancel", icon=ft.icons.ARROW_BACK, on_click=lambda e: e.page.go("/pharmacist/prescriptions"))
                         ], spacing=10)
                     ]),
                     visible=rx['status'] == 'Pending'
                 ) if rx['status'] == 'Pending' else ft.Container(
                     # Render final state summary
                     content=ft.Column([
-                        ft.Icon(ft.Icons.INFO, size=40, color="outline"),
+                        ft.Icon(ft.icons.INFO, size=40, color="outline"),
                         ft.Text(f"This prescription is {rx['status']}", size=16, color="outline")
                     ], horizontal_alignment=ft.CrossAxisAlignment.CENTER),
                     padding=30, alignment=ft.alignment.center

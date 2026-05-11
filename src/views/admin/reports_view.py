@@ -106,7 +106,7 @@ def ReportsView():
                     controls.append(
                         ft.Container(
                             content=ft.Row([
-                                ft.Icon(ft.Icons.PEOPLE, color="primary", size=20),
+                                ft.Icon(ft.icons.PEOPLE, color="primary", size=20),
                                 ft.Text("Customer" if str(role_stat[0]) == "Patient" else str(role_stat[0]), size=14, weight="bold", expand=1),
                                 ft.Text(f"{role_stat[1]} users", size=14),
                             ], spacing=10),
@@ -174,7 +174,7 @@ def ReportsView():
                 return [
                     ft.Container(
                         content=ft.Column([
-                            ft.Icon(ft.Icons.INFO, color="tertiary", size=50),
+                            ft.Icon(ft.icons.INFO, color="tertiary", size=50),
                             ft.Text("No inventory data available", size=18, weight="bold", color="tertiary"),
                             ft.Text("Run the database migration to seed medicines data.", size=13, color="outline"),
                             ft.Text("Command: python src\\services\\db_migration.py", size=11, color="outline", italic=True),
@@ -222,10 +222,10 @@ def ReportsView():
                 
                 # Summary cards - expanded with even spacing
                 ft.Row([
-                    create_summary_card("Total Medicines", total_meds, ft.Icons.MEDICATION, "primary"),
-                    create_summary_card("Low Stock", low_stock, ft.Icons.WARNING, "error"),
-                    create_summary_card("Out of Stock", out_of_stock, ft.Icons.ERROR, "error"),
-                    create_summary_card("Total Value", f"₱{total_value:,.2f}", ft.Icons.PAYMENTS, "secondary"),
+                    create_summary_card("Total Medicines", total_meds, ft.icons.MEDICATION, "primary"),
+                    create_summary_card("Low Stock", low_stock, ft.icons.WARNING, "error"),
+                    create_summary_card("Out of Stock", out_of_stock, ft.icons.ERROR, "error"),
+                    create_summary_card("Total Value", f"₱{total_value:,.2f}", ft.icons.PAYMENTS, "secondary"),
                 ], spacing=15, run_spacing=15),
                 
                 ft.Container(height=20),
@@ -239,7 +239,7 @@ def ReportsView():
                     controls.append(
                         ft.Container(
                             content=ft.Row([
-                                ft.Icon(ft.Icons.CATEGORY, color="secondary", size=20),
+                                ft.Icon(ft.icons.CATEGORY, color="secondary", size=20),
                                 ft.Text(str(cat[0]), size=14, weight="bold", expand=1),
                                 ft.Text(f"{cat[1]} items", size=14),
                                 ft.Text(f"Stock: {cat[2]}", size=14),
@@ -309,7 +309,7 @@ def ReportsView():
                 return [
                     ft.Container(
                         content=ft.Column([
-                            ft.Icon(ft.Icons.INFO, color="tertiary", size=50),
+                            ft.Icon(ft.icons.INFO, color="tertiary", size=50),
                             ft.Text("No prescription data available", size=18, weight="bold", color="tertiary"),
                             ft.Text("Run the database migration to seed prescription data.", size=13, color="outline"),
                             ft.Text("Command: python src\\services\\db_migration.py", size=11, color="outline", italic=True),
@@ -348,10 +348,10 @@ def ReportsView():
                 
                 # Summary cards - expanded with even spacing
                 ft.Row([
-                    create_summary_card("Total Prescriptions", total_rx, ft.Icons.DESCRIPTION, "primary"),
-                    create_summary_card("Pending", pending, ft.Icons.PENDING, "tertiary"),
-                    create_summary_card("Approved", approved, ft.Icons.CHECK_CIRCLE, "primary"),
-                    create_summary_card("Rejected", rejected, ft.Icons.CANCEL, "error"),
+                    create_summary_card("Total Prescriptions", total_rx, ft.icons.DESCRIPTION, "primary"),
+                    create_summary_card("Pending", pending, ft.icons.PENDING, "tertiary"),
+                    create_summary_card("Approved", approved, ft.icons.CHECK_CIRCLE, "primary"),
+                    create_summary_card("Rejected", rejected, ft.icons.CANCEL, "error"),
                 ], spacing=15, run_spacing=15),
                 
                 ft.Container(height=20),
@@ -449,7 +449,7 @@ def ReportsView():
                 controls.extend([
                     ft.Container(
                         content=ft.Row([
-                            ft.Icon(ft.Icons.ERROR, color="error", size=30),
+                            ft.Icon(ft.icons.ERROR, color="error", size=30),
                             ft.Text(f"{len(out_of_stock_items)} items are OUT OF STOCK!", 
                                    size=16, weight="bold", color="error"),
                         ], spacing=10),
@@ -495,7 +495,7 @@ def ReportsView():
                 controls.extend([
                     ft.Container(
                         content=ft.Row([
-                            ft.Icon(ft.Icons.WARNING, color="tertiary", size=30),
+                            ft.Icon(ft.icons.WARNING, color="tertiary", size=30),
                             ft.Text(f"{len(low_stock_items)} items have LOW STOCK (< 10 units)", 
                                    size=16, weight="bold", color="tertiary"),
                         ], spacing=10),
@@ -539,7 +539,7 @@ def ReportsView():
                 controls.append(
                     ft.Container(
                         content=ft.Column([
-                            ft.Icon(ft.Icons.CHECK_CIRCLE, color="primary", size=50),
+                            ft.Icon(ft.icons.CHECK_CIRCLE, color="primary", size=50),
                             ft.Text("All inventory levels are healthy!", 
                                    size=18, weight="bold", color="primary"),
                         ], spacing=10, horizontal_alignment=ft.CrossAxisAlignment.CENTER),
@@ -576,7 +576,7 @@ def ReportsView():
                 return [
                     ft.Container(
                         content=ft.Column([
-                            ft.Icon(ft.Icons.INFO, color="tertiary", size=50),
+                            ft.Icon(ft.icons.INFO, color="tertiary", size=50),
                             ft.Text("Limited system data available", size=18, weight="bold", color="tertiary"),
                             ft.Text("Run the database migration to seed complete demo data.", size=13, color="outline"),
                             ft.Text("Command: python src\\services\\db_migration.py", size=11, color="outline", italic=True),
@@ -606,10 +606,10 @@ def ReportsView():
                 ft.Container(height=10),
                 
                 ft.Row([
-                    create_summary_card("Total Users", total_users, ft.Icons.PEOPLE, "primary"),
-                    create_summary_card("Total Medicines", total_medicines, ft.Icons.MEDICATION, "secondary"),
-                    create_summary_card("Prescriptions", total_prescriptions, ft.Icons.DESCRIPTION, "tertiary"),
-                    create_summary_card("Orders", total_orders, ft.Icons.SHOPPING_CART, "primary"),
+                    create_summary_card("Total Users", total_users, ft.icons.PEOPLE, "primary"),
+                    create_summary_card("Total Medicines", total_medicines, ft.icons.MEDICATION, "secondary"),
+                    create_summary_card("Prescriptions", total_prescriptions, ft.icons.DESCRIPTION, "tertiary"),
+                    create_summary_card("Orders", total_orders, ft.icons.SHOPPING_CART, "primary"),
                 ], spacing=15, run_spacing=15),
                 
                 ft.Container(height=20),
@@ -680,7 +680,7 @@ def ReportsView():
                 return [
                     ft.Container(
                         content=ft.Column([
-                            ft.Icon(ft.Icons.INFO, color="tertiary", size=50),
+                            ft.Icon(ft.icons.INFO, color="tertiary", size=50),
                             ft.Text("No orders data available", size=18, weight="bold", color="tertiary"),
                             ft.Text("Run the database migration to seed orders data.", size=13, color="outline"),
                             ft.Text("Command: python src\\services\\db_migration.py", size=11, color="outline", italic=True),
@@ -719,10 +719,10 @@ def ReportsView():
                 ft.Divider(height=20),
                 
                 ft.Row([
-                    create_summary_card("Total Orders", total_orders, ft.Icons.SHOPPING_CART, "primary"),
-                    create_summary_card("Total Revenue", f"₱{total_revenue:,.2f}", ft.Icons.PAYMENTS, "secondary"),
-                    create_summary_card("Pending", pending, ft.Icons.PENDING, "tertiary"),
-                    create_summary_card("Completed", completed, ft.Icons.CHECK_CIRCLE, "primary"),
+                    create_summary_card("Total Orders", total_orders, ft.icons.SHOPPING_CART, "primary"),
+                    create_summary_card("Total Revenue", f"₱{total_revenue:,.2f}", ft.icons.PAYMENTS, "secondary"),
+                    create_summary_card("Pending", pending, ft.icons.PENDING, "tertiary"),
+                    create_summary_card("Completed", completed, ft.icons.CHECK_CIRCLE, "primary"),
                 ], spacing=15, run_spacing=15),
                 
                 ft.Container(height=20),
@@ -797,7 +797,7 @@ def ReportsView():
                 report_output.controls = [
                     ft.Container(
                         content=ft.Column([
-                            ft.Icon(ft.Icons.ERROR, color="error", size=40),
+                            ft.Icon(ft.icons.ERROR, color="error", size=40),
                             ft.Text(f"Critical error: {str(ex)}", color="error", size=14),
                         ], horizontal_alignment=ft.CrossAxisAlignment.CENTER),
                         padding=20,
@@ -828,7 +828,7 @@ def ReportsView():
                 ft.Row([
                     ft.ElevatedButton(
                         "Generate Report",
-                        icon=ft.Icons.ANALYTICS,
+                        icon=ft.icons.ANALYTICS,
                         bgcolor="primary",
                         color="onPrimary",
                         on_click=generate_report,

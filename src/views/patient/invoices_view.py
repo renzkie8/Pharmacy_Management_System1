@@ -26,12 +26,12 @@ def PatientInvoicesView():
     def create_invoice_card(invoice):
         """Create invoice display card."""
         status_colors = {
-            "Unpaid": ("error", ft.Icons.ERROR_OUTLINE),
-            "Paid": ("primary", ft.Icons.CHECK_CIRCLE),
-            "Cancelled": ("outline", ft.Icons.CANCEL),
-            "Partially Paid": ("tertiary", ft.Icons.PENDING),
+            "Unpaid": ("error", ft.icons.ERROR_OUTLINE),
+            "Paid": ("primary", ft.icons.CHECK_CIRCLE),
+            "Cancelled": ("outline", ft.icons.CANCEL),
+            "Partially Paid": ("tertiary", ft.icons.PENDING),
         }
-        color, icon = status_colors.get(invoice['status'], ("outline", ft.Icons.INFO))
+        color, icon = status_colors.get(invoice['status'], ("outline", ft.icons.INFO))
         
         return ft.Container(
             content=ft.Column([
@@ -80,7 +80,7 @@ def PatientInvoicesView():
                 
                 # Render transaction metadata
                 ft.Row([
-                    ft.Icon(ft.Icons.PAYMENT, size=16, color="outline"),
+                    ft.Icon(ft.icons.PAYMENT, size=16, color="outline"),
                     ft.Text(f"Payment Method: {invoice['payment_method']}", size=12, color="outline"),
                 ], spacing=5),
                 
@@ -99,12 +99,12 @@ def PatientInvoicesView():
                 ft.Row([
                     ft.ElevatedButton(
                         "View Details",
-                        icon=ft.Icons.VISIBILITY,
+                        icon=ft.icons.VISIBILITY,
                         on_click=lambda e, inv_id=invoice['id']: e.page.go(f"/patient/invoice/{inv_id}"),
                     ),
                     ft.ElevatedButton(
                         "Pay Now",
-                        icon=ft.Icons.PAYMENT,
+                        icon=ft.icons.PAYMENT,
                         bgcolor="primary",
                         color="onPrimary",
                         disabled=invoice['status'] != "Unpaid",
@@ -257,7 +257,7 @@ def PatientInvoicesView():
                 # Display confirmation
                 dialog_e.page.snack_bar = ft.SnackBar(
                     content=ft.Row([
-                        ft.Icon(ft.Icons.CHECK_CIRCLE, color="white"),
+                        ft.Icon(ft.icons.CHECK_CIRCLE, color="white"),
                         ft.Text(f"Payment of ₱{amount:.2f} recorded successfully!", color="white"),
                     ]),
                     bgcolor="primary",
@@ -282,7 +282,7 @@ def PatientInvoicesView():
         payment_dialog = ft.AlertDialog(
             modal=True,
             title=ft.Row([
-                ft.Icon(ft.Icons.PAYMENT, color="primary"),
+                ft.Icon(ft.icons.PAYMENT, color="primary"),
                 ft.Text("Make Payment"),
             ]),
             content=ft.Container(
@@ -333,7 +333,7 @@ def PatientInvoicesView():
                 ft.TextButton("Cancel", on_click=close_dialog),
                 ft.ElevatedButton(
                     "Submit Payment",
-                    icon=ft.Icons.CHECK,
+                    icon=ft.icons.CHECK,
                     bgcolor="primary",
                     color="white",
                     on_click=submit_payment,
@@ -367,7 +367,7 @@ def PatientInvoicesView():
                     ft.Container(
                         content=ft.Column([
                             ft.Row([
-                                ft.Icon(ft.Icons.ERROR_OUTLINE, color="error", size=30),
+                                ft.Icon(ft.icons.ERROR_OUTLINE, color="error", size=30),
                                 ft.Column([
                                     ft.Text("Unpaid Bills", size=12, color="outline"),
                                     ft.Text(f"₱{total_unpaid:,.2f}", size=20, weight="bold", color="error"),
@@ -384,7 +384,7 @@ def PatientInvoicesView():
                     ft.Container(
                         content=ft.Column([
                             ft.Row([
-                                ft.Icon(ft.Icons.CHECK_CIRCLE, color="primary", size=30),
+                                ft.Icon(ft.icons.CHECK_CIRCLE, color="primary", size=30),
                                 ft.Column([
                                     ft.Text("Paid Bills", size=12, color="outline"),
                                     ft.Text(f"₱{total_paid:,.2f}", size=20, weight="bold", color="primary"),
@@ -401,7 +401,7 @@ def PatientInvoicesView():
                     ft.Container(
                         content=ft.Column([
                             ft.Row([
-                                ft.Icon(ft.Icons.RECEIPT, color="secondary", size=30),
+                                ft.Icon(ft.icons.RECEIPT, color="secondary", size=30),
                                 ft.Column([
                                     ft.Text("Total Invoices", size=12, color="outline"),
                                     ft.Text(str(len(invoices)), size=20, weight="bold", color="secondary"),
@@ -421,7 +421,7 @@ def PatientInvoicesView():
                 # Informational Banner
                 ft.Container(
                     content=ft.Row([
-                        ft.Icon(ft.Icons.INFO_OUTLINE, color="tertiary", size=20),
+                        ft.Icon(ft.icons.INFO_OUTLINE, color="tertiary", size=20),
                         ft.Text(
                             "Invoices are automatically generated when you place orders. Pay unpaid bills using the payment form or contact the billing clerk.",
                             size=13,
@@ -443,7 +443,7 @@ def PatientInvoicesView():
                     create_invoice_card(inv) for inv in invoices
                 ], spacing=15) if invoices else ft.Container(
                     content=ft.Column([
-                        ft.Icon(ft.Icons.RECEIPT_LONG_OUTLINED, size=80, color="outline"),
+                        ft.Icon(ft.icons.RECEIPT_LONG_OUTLINED, size=80, color="outline"),
                         ft.Text("No invoices yet", size=18, color="outline"),
                         ft.Text("Invoices will appear here when you place orders", size=14, color="outline"),
                     ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),

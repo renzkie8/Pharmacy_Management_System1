@@ -133,7 +133,7 @@ def AdminDashboard():
         
         return ft.Container(
             content=ft.Row([
-                ft.Icon(ft.Icons.CIRCLE, size=8, color="primary"),
+                ft.Icon(ft.icons.CIRCLE, size=8, color="primary"),
                 ft.Column([
                     ft.Text(action, size=13),
                     ft.Text(f"by {user} • {time_ago}", size=11, color="outline"),
@@ -187,7 +187,7 @@ def AdminDashboard():
         # Header section
         ft.Container(
             content=ft.Row([
-                ft.Icon(ft.Icons.ADMIN_PANEL_SETTINGS, color="primary", size=40),
+                ft.Icon(ft.icons.ADMIN_PANEL_SETTINGS, color="primary", size=40),
                 ft.Column([
                     ft.Text(
                         "System Administration",
@@ -209,27 +209,27 @@ def AdminDashboard():
             create_stat_card(
                 "Total Users",
                 total_users,
-                ft.Icons.PEOPLE,
+                ft.icons.PEOPLE,
                 "primary",
                 f"{total_patients} customers"
             ),
             create_stat_card(
                 "Total Medicines",
                 total_medicines,
-                ft.Icons.MEDICATION,
+                ft.icons.MEDICATION,
                 "secondary",
             ),
             create_stat_card(
                 "Low Stock Items",
                 low_stock_count,
-                ft.Icons.WARNING,
+                ft.icons.WARNING,
                 "error" if low_stock_count > 0 else "primary",
                 f"{out_of_stock} out of stock" if out_of_stock > 0 else "All good"
             ),
             create_stat_card(
                 "Pending Tasks",
                 pending_prescriptions + pending_orders,
-                ft.Icons.PENDING_ACTIONS,
+                ft.icons.PENDING_ACTIONS,
                 "tertiary",
                 f"{pending_prescriptions} Rx, {pending_orders} orders"
             ),
@@ -244,19 +244,19 @@ def AdminDashboard():
                 ft.Row([
                     create_action_button(
                         "Manage Users",
-                        ft.Icons.PEOPLE,
+                        ft.icons.PEOPLE,
                         "/admin/users",
                         "primary",
                     ),
                     create_action_button(
                         "View Reports",
-                        ft.Icons.ANALYTICS,
+                        ft.icons.ANALYTICS,
                         "/admin/reports",
                         "secondary",
                     ),
                     create_action_button(
                         "System Logs",
-                        ft.Icons.HISTORY,
+                        ft.icons.HISTORY,
                         "/admin/logs",
                         "tertiary",
                     ),
@@ -299,25 +299,25 @@ def AdminDashboard():
                     
                     # Database status
                     ft.Row([
-                        ft.Icon(ft.Icons.DATA_OBJECT, color="primary", size=30),
+                        ft.Icon(ft.icons.DATA_OBJECT, color="primary", size=30),
                         ft.Column([
                             ft.Text("Database", size=14, weight="bold"),
                             ft.Text(f"{total_users + total_medicines} records", size=12, color="outline"),
                         ], spacing=2, expand=True),
-                        ft.Icon(ft.Icons.CHECK_CIRCLE, color="primary"),
+                        ft.Icon(ft.icons.CHECK_CIRCLE, color="primary"),
                     ], spacing=10),
                     
                     ft.Divider(height=5, color="transparent"),
                     
                     # Inventory status
                     ft.Row([
-                        ft.Icon(ft.Icons.INVENTORY, color="secondary", size=30),
+                        ft.Icon(ft.icons.INVENTORY, color="secondary", size=30),
                         ft.Column([
                             ft.Text("Inventory", size=14, weight="bold"),
                             ft.Text(f"{low_stock_count} items need attention", size=12, 
                                    color="error" if low_stock_count > 0 else "primary"),
                         ], spacing=2, expand=True),
-                        ft.Icon(ft.Icons.WARNING if low_stock_count > 0 else ft.Icons.CHECK_CIRCLE, 
+                        ft.Icon(ft.icons.WARNING if low_stock_count > 0 else ft.icons.CHECK_CIRCLE, 
                                color="error" if low_stock_count > 0 else "primary"),
                     ], spacing=10),
                     
@@ -325,12 +325,12 @@ def AdminDashboard():
                     
                     # Prescriptions status
                     ft.Row([
-                        ft.Icon(ft.Icons.MEDICATION, color="tertiary", size=30),
+                        ft.Icon(ft.icons.MEDICATION, color="tertiary", size=30),
                         ft.Column([
                             ft.Text("Prescriptions", size=14, weight="bold"),
                             ft.Text(f"{pending_prescriptions} pending review", size=12, color="outline"),
                         ], spacing=2, expand=True),
-                        ft.Icon(ft.Icons.PENDING if pending_prescriptions > 0 else ft.Icons.CHECK_CIRCLE,
+                        ft.Icon(ft.icons.PENDING if pending_prescriptions > 0 else ft.icons.CHECK_CIRCLE,
                                color="tertiary" if pending_prescriptions > 0 else "primary"),
                     ], spacing=10),
                     

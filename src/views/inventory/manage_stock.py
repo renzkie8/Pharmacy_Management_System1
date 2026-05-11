@@ -29,7 +29,7 @@ def ManageStock():
     # Search input configuration
     search_txt = ft.TextField(
         hint_text="Search medicine name...",
-        prefix_icon=ft.Icons.SEARCH,
+        prefix_icon=ft.icons.SEARCH,
         expand=True,
         height=45,
         content_padding=10,
@@ -94,7 +94,7 @@ def ManageStock():
         )
 
     # Modal Form Fields
-    name_input = create_input("Medicine Name", ft.Icons.MEDICATION)
+    name_input = create_input("Medicine Name", ft.icons.MEDICATION)
     category_input = ft.Dropdown(
         label="Category",
         options=category_filter.options[1:], 
@@ -104,8 +104,8 @@ def ManageStock():
     )
     price_input = create_input("Price (PHP)", None, numeric=True, in_row=True)
     stock_input = create_input("Stock Qty", None, numeric=True, in_row=True)
-    expiry_input = create_input("Expiry (YYYY-MM-DD)", ft.Icons.CALENDAR_TODAY)
-    supplier_input = create_input("Supplier", ft.Icons.LOCAL_SHIPPING)
+    expiry_input = create_input("Expiry (YYYY-MM-DD)", ft.icons.CALENDAR_TODAY)
+    supplier_input = create_input("Supplier", ft.icons.LOCAL_SHIPPING)
 
     # Core Table Components
     table_header = create_table_row([
@@ -124,7 +124,7 @@ def ManageStock():
     # Empty state container
     empty_state = ft.Container(
         content=ft.Column([
-            ft.Icon(ft.Icons.INVENTORY_2_OUTLINED, size=100, color="outline"),
+            ft.Icon(ft.icons.INVENTORY_2_OUTLINED, size=100, color="outline"),
             ft.Container(height=20),
             ft.Text("No medicines in inventory", size=20, weight="bold", color="outline"),
             ft.Container(height=10),
@@ -214,14 +214,14 @@ def ManageStock():
                     ft.Text(m['supplier'] or "N/A"),
                     ft.Row([
                         ft.IconButton(
-                            icon=ft.Icons.EDIT,
+                            icon=ft.icons.EDIT,
                             icon_size=18,
                             icon_color="primary",
                             tooltip="Edit",
                             on_click=lambda e, med=m: open_edit_dialog(e, med)
                         ),
                         ft.IconButton(
-                            icon=ft.Icons.DELETE,
+                            icon=ft.icons.DELETE,
                             icon_size=18,
                             icon_color="error",
                             tooltip="Delete",
@@ -242,7 +242,7 @@ def ManageStock():
         name_input.value = ""; category_input.value = None
         price_input.value = ""; stock_input.value = ""
         expiry_input.value = ""; supplier_input.value = ""
-        dialog.title = ft.Row([ft.Icon(ft.Icons.ADD_BOX, color="primary"), ft.Text("Add New Medicine")])
+        dialog.title = ft.Row([ft.Icon(ft.icons.ADD_BOX, color="primary"), ft.Text("Add New Medicine")])
         e.page.open(dialog)
 
     def open_edit_dialog(e, med):
@@ -251,7 +251,7 @@ def ManageStock():
         name_input.value = med['name']; category_input.value = med['category']
         price_input.value = str(med['price']); stock_input.value = str(med['stock'])
         expiry_input.value = med['expiry_date']; supplier_input.value = med['supplier']
-        dialog.title = ft.Row([ft.Icon(ft.Icons.EDIT, color="primary"), ft.Text("Edit Medicine")])
+        dialog.title = ft.Row([ft.Icon(ft.icons.EDIT, color="primary"), ft.Text("Edit Medicine")])
         e.page.open(dialog)
 
     def save_medicine(e):
@@ -294,7 +294,7 @@ def ManageStock():
     return ft.Column([
         ft.Row([
             ft.Text("Stock Management", size=28, weight="bold"),
-            ft.ElevatedButton("Add Medicine", icon=ft.Icons.ADD, bgcolor="primary", color="onPrimary", on_click=open_add_dialog),
+            ft.ElevatedButton("Add Medicine", icon=ft.icons.ADD, bgcolor="primary", color="onPrimary", on_click=open_add_dialog),
         ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
         
         ft.Container(height=10),
@@ -302,7 +302,7 @@ def ManageStock():
         ft.Container(
             content=ft.Row([
                 search_txt, category_filter, stock_filter,
-                ft.IconButton(icon=ft.Icons.SEARCH, icon_color="primary", on_click=lambda e: load_data(e))
+                ft.IconButton(icon=ft.icons.SEARCH, icon_color="primary", on_click=lambda e: load_data(e))
             ], spacing=10, expand=True),
             padding=15, bgcolor="surfaceVariant", border_radius=10,
         ),

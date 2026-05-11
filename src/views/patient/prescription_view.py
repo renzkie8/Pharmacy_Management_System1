@@ -31,13 +31,13 @@ def PatientPrescriptionsView():
     def create_prescription_card(rx):
         # Define colors for different statuses
         status_colors = {
-            "Pending": ("tertiary", ft.Icons.PENDING_ACTIONS),
-            "Approved": ("primary", ft.Icons.CHECK_CIRCLE),
-            "Rejected": ("error", ft.Icons.CANCEL),
+            "Pending": ("tertiary", ft.icons.PENDING_ACTIONS),
+            "Approved": ("primary", ft.icons.CHECK_CIRCLE),
+            "Rejected": ("error", ft.icons.CANCEL),
         }
         
         # Get the color and icon based on status, default to gray if unknown
-        color, icon = status_colors.get(rx['status'], ("outline", ft.Icons.INFO))
+        color, icon = status_colors.get(rx['status'], ("outline", ft.icons.INFO))
         
         # Return the UI container
         return ft.Container(
@@ -205,7 +205,7 @@ def PatientPrescriptionsView():
         prescription_form = ft.AlertDialog(
             modal=True,
             title=ft.Row([
-                ft.Icon(ft.Icons.MEDICAL_SERVICES, color="primary"), 
+                ft.Icon(ft.icons.MEDICAL_SERVICES, color="primary"), 
                 ft.Text("New Prescription")
             ]),
             bgcolor="surface", 
@@ -230,7 +230,7 @@ def PatientPrescriptionsView():
                 ft.TextButton("Cancel", on_click=lambda e: e.page.close(prescription_form)),
                 ft.ElevatedButton(
                     "Submit", 
-                    icon=ft.Icons.SEND, 
+                    icon=ft.icons.SEND, 
                     bgcolor="primary", 
                     color="white", 
                     on_click=save_prescription
@@ -246,7 +246,7 @@ def PatientPrescriptionsView():
     return ft.Column([
         # The top header section
         ft.Row([
-            ft.Icon(ft.Icons.MEDICAL_SERVICES, color="primary", size=32),
+            ft.Icon(ft.icons.MEDICAL_SERVICES, color="primary", size=32),
             ft.Column([
                 ft.Text("My Prescriptions", size=28, weight="bold"),
                 ft.Text("Submit prescription requests and track their status", size=14, color="outline"),
@@ -255,7 +255,7 @@ def PatientPrescriptionsView():
             # The big button to add a prescription
             ft.ElevatedButton(
                 content=ft.Row([
-                    ft.Icon(ft.Icons.ADD, color="white"),
+                    ft.Icon(ft.icons.ADD, color="white"),
                     ft.Text("Submit Prescription", color="white"),
                 ], spacing=8),
                 bgcolor="primary",
@@ -270,7 +270,7 @@ def PatientPrescriptionsView():
         ft.Container(
             content=ft.Column([
                 ft.Row([
-                    ft.Icon(ft.Icons.INFO_OUTLINE, color="primary", size=20),
+                    ft.Icon(ft.icons.INFO_OUTLINE, color="primary", size=20),
                     ft.Text("How it works:", size=14, weight="bold"),
                 ]),
                 ft.Text("1. Fill in prescription details from your doctor", size=13),
@@ -294,7 +294,7 @@ def PatientPrescriptionsView():
             create_prescription_card(rx) for rx in prescriptions
         ], spacing=10) if prescriptions else ft.Container(
             content=ft.Column([
-        ft.Icon(ft.Icons.DESCRIPTION_OUTLINED, size=100, color="outline"),
+        ft.Icon(ft.icons.DESCRIPTION_OUTLINED, size=100, color="outline"),
         ft.Container(height=20),
         ft.Text("No prescriptions yet", size=20, weight="bold", color="outline"),
         ft.Container(height=10),

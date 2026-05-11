@@ -125,12 +125,12 @@ def OrdersView():
                 ft.Row([
                     ft.OutlinedButton(
                         "View Receipt",
-                        icon=ft.Icons.RECEIPT,
+                        icon=ft.icons.RECEIPT,
                         on_click=lambda e: e.page.go(f"/patient/pos_receipt/{order_id}")
                     ),
                     ft.TextButton(
                         "View Details", 
-                        icon=ft.Icons.VISIBILITY,
+                        icon=ft.icons.VISIBILITY,
                         on_click=lambda e: view_order_details(e, order_id)
                     ),
                 ], alignment=ft.MainAxisAlignment.END, spacing=10),
@@ -232,11 +232,11 @@ def OrdersView():
             orders_container.controls.append(
                 ft.Container(
                     content=ft.Column([
-                        ft.Icon(ft.Icons.RECEIPT_LONG_OUTLINED, size=80, color="outline"),
+                        ft.Icon(ft.icons.RECEIPT_LONG_OUTLINED, size=80, color="outline"),
                         ft.Text("No orders found", size=18, color="outline"),
                         ft.ElevatedButton(
                             "Start Shopping",
-                            icon=ft.Icons.SHOPPING_BAG,
+                            icon=ft.icons.SHOPPING_BAG,
                             on_click=lambda e: e.page.go("/patient/search"),
                             bgcolor="primary",
                             color="onPrimary",

@@ -82,7 +82,7 @@ def StaffDashboard():
     def create_patient_item(patient):
         return ft.Container(
             content=ft.Row([
-                ft.Icon(ft.Icons.PERSON, color="primary", size=24),
+                ft.Icon(ft.icons.PERSON, color="primary", size=24),
                 ft.Column([
                     ft.Text(patient[1], size=14, weight="bold"),
                     # Truncate timestamp to date format
@@ -90,7 +90,7 @@ def StaffDashboard():
                 ], spacing=2, expand=True),
                 # Transition trigger to detailed view
                 ft.IconButton(
-                    icon=ft.Icons.ARROW_FORWARD_IOS,
+                    icon=ft.icons.ARROW_FORWARD_IOS,
                     icon_size=16,
                     icon_color="primary",
                     tooltip="View Details",
@@ -117,9 +117,9 @@ def StaffDashboard():
                 
                 # 1. The Stats Row (The 3 boxes)
                 ft.Row([
-                    create_stat_card("Total Customers", total_patients, ft.Icons.GROUPS, "primary"),
-                    create_stat_card("New Today", new_today, ft.Icons.PERSON_ADD, "secondary"),
-                    create_stat_card("Active Rx", active_prescriptions, ft.Icons.MEDICATION, "tertiary"),
+                    create_stat_card("Total Customers", total_patients, ft.icons.GROUPS, "primary"),
+                    create_stat_card("New Today", new_today, ft.icons.PERSON_ADD, "secondary"),
+                    create_stat_card("Active Rx", active_prescriptions, ft.icons.MEDICATION, "tertiary"),
                 ], spacing=15),
                 
                 ft.Container(height=20),
@@ -130,10 +130,10 @@ def StaffDashboard():
                     ft.Container(
                         content=ft.Column([
                             ft.Text("Quick Actions", size=18, weight="bold"),
-                            create_action_button("📦 Order Tracking", ft.Icons.LOCAL_SHIPPING, "/staff/orders", "tertiary"),
-                            create_action_button("Search Customers", ft.Icons.SEARCH, "/staff/search", "primary"),
-                            create_action_button("View All Customers", ft.Icons.LIST, "/staff/patients", "secondary"),
-                            create_action_button("Help Desk", ft.Icons.HELP, "/staff/help", "tertiary"),
+                            create_action_button("📦 Order Tracking", ft.icons.LOCAL_SHIPPING, "/staff/orders", "tertiary"),
+                            create_action_button("Search Customers", ft.icons.SEARCH, "/staff/search", "primary"),
+                            create_action_button("View All Customers", ft.icons.LIST, "/staff/patients", "secondary"),
+                            create_action_button("Help Desk", ft.icons.HELP, "/staff/help", "tertiary"),
                             
                             ft.Container(height=20),
                             
@@ -160,10 +160,10 @@ def StaffDashboard():
                             ft.Text("Staff Guidelines", size=18, weight="bold"),
                             ft.Container(
                                 content=ft.Column([
-                                    ft.Row([ft.Icon(ft.Icons.CHECK_CIRCLE, size=16, color="primary"), ft.Text("Verify ID before sharing info", size=13)], spacing=10),
-                                    ft.Row([ft.Icon(ft.Icons.CHECK_CIRCLE, size=16, color="primary"), ft.Text("Keep customer data confidential", size=13)], spacing=10),
-                                    ft.Row([ft.Icon(ft.Icons.CHECK_CIRCLE, size=16, color="primary"), ft.Text("Report errors to Admin", size=13)], spacing=10),
-                                    ft.Row([ft.Icon(ft.Icons.CHECK_CIRCLE, size=16, color="primary"), ft.Text("Be polite and professional", size=13)], spacing=10),
+                                    ft.Row([ft.Icon(ft.icons.CHECK_CIRCLE, size=16, color="primary"), ft.Text("Verify ID before sharing info", size=13)], spacing=10),
+                                    ft.Row([ft.Icon(ft.icons.CHECK_CIRCLE, size=16, color="primary"), ft.Text("Keep customer data confidential", size=13)], spacing=10),
+                                    ft.Row([ft.Icon(ft.icons.CHECK_CIRCLE, size=16, color="primary"), ft.Text("Report errors to Admin", size=13)], spacing=10),
+                                    ft.Row([ft.Icon(ft.icons.CHECK_CIRCLE, size=16, color="primary"), ft.Text("Be polite and professional", size=13)], spacing=10),
                                 ], spacing=15),
                                 padding=20,
                                 bgcolor="surface",
@@ -176,7 +176,7 @@ def StaffDashboard():
                             # Read-only warning box
                             ft.Container(
                                 content=ft.Row([
-                                    ft.Icon(ft.Icons.LOCK, color="tertiary"),
+                                    ft.Icon(ft.icons.LOCK, color="tertiary"),
                                     ft.Text("You have Read-Only access to customers.", size=12, expand=True)
                                 ], spacing=10),
                                 padding=15,

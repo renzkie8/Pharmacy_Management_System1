@@ -127,7 +127,7 @@ def BillingDashboard():
                     border_radius=15,
                 ),
                 ft.IconButton(
-                    icon=ft.Icons.ARROW_FORWARD,
+                    icon=ft.icons.ARROW_FORWARD,
                     icon_color="primary",
                     tooltip="View Invoice",
                     on_click=lambda e, inv_id=inv[0]: e.page.go(f"/billing/invoice/{inv_id}"),
@@ -155,10 +155,10 @@ def BillingDashboard():
             content=ft.Column([
                 # Stats (Fixed Height)
                 ft.Row([
-                    create_stat_card("Pending Invoices", pending_invoices, ft.Icons.PENDING_ACTIONS, "error", "Awaiting payment"),
-                    create_stat_card("Paid Today", paid_today, ft.Icons.CHECK_CIRCLE, "primary", "Completed transactions"),
-                    create_stat_card("Today's Revenue", revenue_today, ft.Icons.ATTACH_MONEY, "primary", is_currency=True),
-                    create_stat_card("Pending Amount", pending_amount, ft.Icons.MONEY_OFF, "error", is_currency=True),
+                    create_stat_card("Pending Invoices", pending_invoices, ft.icons.PENDING_ACTIONS, "error", "Awaiting payment"),
+                    create_stat_card("Paid Today", paid_today, ft.icons.CHECK_CIRCLE, "primary", "Completed transactions"),
+                    create_stat_card("Today's Revenue", revenue_today, ft.icons.ATTACH_MONEY, "primary", is_currency=True),
+                    create_stat_card("Pending Amount", pending_amount, ft.icons.MONEY_OFF, "error", is_currency=True),
                 ], spacing=15), 
                 
                 ft.Container(height=20),
@@ -168,11 +168,11 @@ def BillingDashboard():
                     content=ft.Column([
                         ft.Text("Quick Actions", size=20, weight="bold"),
                         ft.Row([
-                            create_action_button("Create Invoice", ft.Icons.ADD_CARD, "/billing/create-invoice", "primary"),
-                            create_action_button("View All Invoices", ft.Icons.RECEIPT_LONG, "/billing/invoices", "secondary"),
-                            create_action_button("Payment History", ft.Icons.HISTORY, "/billing/payments", "tertiary"),
-                            create_action_button("Generate Report", ft.Icons.ANALYTICS, "/billing/reports", "primary"),
-                            create_action_button("Verify Orders", ft.Icons.VERIFIED, "/staff/orders", "secondary"),
+                            create_action_button("Create Invoice", ft.icons.ADD_CARD, "/billing/create-invoice", "primary"),
+                            create_action_button("View All Invoices", ft.icons.RECEIPT_LONG, "/billing/invoices", "secondary"),
+                            create_action_button("Payment History", ft.icons.HISTORY, "/billing/payments", "tertiary"),
+                            create_action_button("Generate Report", ft.icons.ANALYTICS, "/billing/reports", "primary"),
+                            create_action_button("Verify Orders", ft.icons.VERIFIED, "/staff/orders", "secondary"),
                         ], spacing=15, wrap=True),
                     ], spacing=15),
                     padding=20, bgcolor="surface", border_radius=10, border=ft.border.all(1, "outlineVariant"),
@@ -185,7 +185,7 @@ def BillingDashboard():
                     # Recent Invoices Column
                     ft.Container(
                         content=ft.Column([
-                            ft.Row([ft.Icon(ft.Icons.RECEIPT, color="primary"), ft.Text("Recent Invoices", size=20, weight="bold")], spacing=10),
+                            ft.Row([ft.Icon(ft.icons.RECEIPT, color="primary"), ft.Text("Recent Invoices", size=20, weight="bold")], spacing=10),
                             ft.Divider(),
                             *invoice_widgets,
                             ft.TextButton("View All Invoices →", on_click=lambda e: e.page.go("/billing/invoices")),
@@ -196,7 +196,7 @@ def BillingDashboard():
                     # Recent Activity Column
                     ft.Container(
                         content=ft.Column([
-                            ft.Row([ft.Icon(ft.Icons.HISTORY, color="primary"), ft.Text("Recent Activity", size=20, weight="bold")], spacing=10),
+                            ft.Row([ft.Icon(ft.icons.HISTORY, color="primary"), ft.Text("Recent Activity", size=20, weight="bold")], spacing=10),
                             ft.Divider(),
                             ft.Container(content=ft.Column(activity_widgets, spacing=8), padding=10, border=ft.border.all(1, "outlineVariant"), border_radius=8),
                         ], spacing=10),

@@ -178,7 +178,7 @@ def CartView():
                     height=60,
                     bgcolor="surfaceVariant",
                     border_radius=8,
-                    content=ft.Icon(ft.Icons.MEDICATION, size=30, color="outline"),
+                    content=ft.Icon(ft.icons.MEDICATION, size=30, color="outline"),
                     alignment=ft.alignment.center,
                 ),
                 # name and price
@@ -190,14 +190,14 @@ def CartView():
                 # plus minus buttons
                 ft.Row([
                     ft.IconButton(
-                        icon=ft.Icons.REMOVE,
+                        icon=ft.icons.REMOVE,
                         icon_size=16,
                         icon_color="primary",
                         on_click=lambda e: update_quantity(cart_id, medicine_id, quantity - 1, quantity, stock, e)
                     ),
                     quantity_field,
                     ft.IconButton(
-                        icon=ft.Icons.ADD,
+                        icon=ft.icons.ADD,
                         icon_size=16,
                         icon_color="primary",
                         on_click=lambda e: update_quantity(cart_id, medicine_id, quantity + 1, quantity, stock, e)
@@ -212,7 +212,7 @@ def CartView():
                 ),
                 # delete button
                 ft.IconButton(
-                    icon=ft.Icons.DELETE_OUTLINE,
+                    icon=ft.icons.DELETE_OUTLINE,
                     icon_color="error",
                     tooltip="Remove from cart",
                     on_click=lambda e: remove_from_cart(cart_id, medicine_id, quantity, e)
@@ -368,7 +368,7 @@ def CartView():
                     "Proceed to Checkout",
                     width=300,
                     height=50,
-                    icon=ft.Icons.PAYMENT,
+                    icon=ft.icons.PAYMENT,
                     bgcolor="primary",
                     color="onPrimary",
                     on_click=proceed_to_checkout,
@@ -376,19 +376,19 @@ def CartView():
                 ft.OutlinedButton(
                     "Continue Shopping",
                     width=300,
-                    icon=ft.Icons.ARROW_BACK,
+                    icon=ft.icons.ARROW_BACK,
                     on_click=lambda e: e.page.go("/patient/search"),
                 ),
             ], spacing=10, horizontal_alignment=ft.CrossAxisAlignment.CENTER)
         else:
             # Render empty state
             summary_container.content = ft.Column([
-                ft.Icon(ft.Icons.SHOPPING_CART_OUTLINED, size=100, color="outline"),
+                ft.Icon(ft.icons.SHOPPING_CART_OUTLINED, size=100, color="outline"),
                 ft.Text("Your cart is empty", size=20, color="outline"),
                 ft.Container(height=20),
                 ft.ElevatedButton(
                     "Browse Medicines",
-                    icon=ft.Icons.SEARCH,
+                    icon=ft.icons.SEARCH,
                     on_click=lambda e: e.page.go("/patient/search"),
                     bgcolor="primary",
                     color="onPrimary",
@@ -407,12 +407,12 @@ def CartView():
             ft.Container(height=20),
             ft.Container(
                 content=ft.Column([
-                    ft.Icon(ft.Icons.SHOPPING_CART_OUTLINED, size=100, color="outline"),
+                    ft.Icon(ft.icons.SHOPPING_CART_OUTLINED, size=100, color="outline"),
                     ft.Text("Your cart is empty", size=20, color="outline"),
                     ft.Container(height=20),
                     ft.ElevatedButton(
                         "Browse Medicines",
-                        icon=ft.Icons.SEARCH,
+                        icon=ft.icons.SEARCH,
                         on_click=lambda e: e.page.go("/patient/search"),
                         bgcolor="primary",
                         color="onPrimary",
@@ -460,7 +460,7 @@ def CartView():
             "Proceed to Checkout",
             width=300,
             height=50,
-            icon=ft.Icons.PAYMENT,
+            icon=ft.icons.PAYMENT,
             bgcolor="primary",
             color="onPrimary",
             on_click=proceed_to_checkout,
@@ -468,7 +468,7 @@ def CartView():
         ft.OutlinedButton(
             "Continue Shopping",
             width=300,
-            icon=ft.Icons.ARROW_BACK,
+            icon=ft.icons.ARROW_BACK,
             on_click=lambda e: e.page.go("/patient/search"),
         ),
     ], spacing=10, horizontal_alignment=ft.CrossAxisAlignment.CENTER)

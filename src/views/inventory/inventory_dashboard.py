@@ -35,14 +35,14 @@ def InventoryDashboard():
         
         # Key Performance Indicators row
         ft.Row([
-            create_stat_card("Total Products", total_meds, ft.Icons.INVENTORY_2, "primary"),
-            create_stat_card("Low Stock Items", low_stock_count, ft.Icons.WARNING, "error"),
+            create_stat_card("Total Products", total_meds, ft.icons.INVENTORY_2, "primary"),
+            create_stat_card("Low Stock Items", low_stock_count, ft.icons.WARNING, "error"),
         ], spacing=15),
 
         ft.Container(height=20),
         
         # Navigation action buttons
         ft.Text("Quick Actions", size=20, weight="bold"),
-        ft.ElevatedButton("Manage Stock", icon=ft.Icons.EDIT, on_click=lambda e: e.page.go("/inventory/stock"), height=50),
+        ft.ElevatedButton("Manage Stock", icon=ft.icons.EDIT, on_click=lambda e: e.page.go("/inventory/stock"), height=50),
         
     ], scroll=ft.ScrollMode.AUTO)

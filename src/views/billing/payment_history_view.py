@@ -45,7 +45,7 @@ def PaymentHistoryView():
     
     search_field = ft.TextField(
         hint_text="Search by invoice #, customer name...", 
-        prefix_icon=ft.Icons.SEARCH, 
+        prefix_icon=ft.icons.SEARCH, 
         border_color="primary", # Apply theme border
         expand=True
     )
@@ -92,8 +92,8 @@ def PaymentHistoryView():
     def create_payment_card(payment):
         inv_id, inv_number, amount, payment_method, payment_date, created_at, patient_name, clerk_name = payment
         
-        payment_icons = {'Cash': ft.Icons.MONEY, 'Credit Card': ft.Icons.CREDIT_CARD}
-        icon = payment_icons.get(payment_method, ft.Icons.PAYMENT)
+        payment_icons = {'Cash': ft.icons.MONEY, 'Credit Card': ft.icons.CREDIT_CARD}
+        icon = payment_icons.get(payment_method, ft.icons.PAYMENT)
         color = 'primary'
         
         return ft.Container(
@@ -120,7 +120,7 @@ def PaymentHistoryView():
                 ], spacing=10, wrap=True),
                 
                 ft.Row([
-                    ft.TextButton("View Invoice", icon=ft.Icons.RECEIPT, on_click=lambda e, inv_id=inv_id: e.page.go(f"/billing/invoice/{inv_id}")),
+                    ft.TextButton("View Invoice", icon=ft.icons.RECEIPT, on_click=lambda e, inv_id=inv_id: e.page.go(f"/billing/invoice/{inv_id}")),
                 ], spacing=5),
             ], spacing=10),
             padding=20,
@@ -145,7 +145,7 @@ def PaymentHistoryView():
             payments_container.controls.append(
                 ft.Container(
                     content=ft.Row([
-                        ft.Icon(ft.Icons.PAYMENTS, color="primary", size=28),
+                        ft.Icon(ft.icons.PAYMENTS, color="primary", size=28),
                         ft.Column([
                             ft.Text(f"Total Revenue: ₱{total_revenue:,.2f}", size=20, weight="bold", color="primary"),
                             ft.Text(f"Showing {len(payments)} payment(s)", size=13, color="outline"),
@@ -164,7 +164,7 @@ def PaymentHistoryView():
             payments_container.controls.append(
                 ft.Container(
                     content=ft.Column([
-                        ft.Icon(ft.Icons.SEARCH_OFF, size=80, color="outline"),
+                        ft.Icon(ft.icons.SEARCH_OFF, size=80, color="outline"),
                         ft.Text("No payment history found", size=18, color="outline"),
                         ft.Text("Try adjusting your filters", size=14, color="outline"),
                     ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
@@ -191,7 +191,7 @@ def PaymentHistoryView():
                 
                 ft.Row([
                     search_field,
-                    ft.ElevatedButton("Apply Filters", icon=ft.Icons.FILTER_ALT, bgcolor="primary", color="white", on_click=load_payments),
+                    ft.ElevatedButton("Apply Filters", icon=ft.icons.FILTER_ALT, bgcolor="primary", color="white", on_click=load_payments),
                     # Ensure standard controls
                 ], spacing=10),
                 

@@ -191,7 +191,7 @@ def PatientDashboard():
         order_widgets.append(
             ft.Container(
                 content=ft.Column([
-                    ft.Icon(ft.Icons.SHOPPING_BAG_OUTLINED, size=40, color="outline"),
+                    ft.Icon(ft.icons.SHOPPING_BAG_OUTLINED, size=40, color="outline"),
                     ft.Text("No orders yet", color="outline"),
                     ft.Text("Start shopping to create your first order!", 
                            size=12, color="outline"),
@@ -210,7 +210,7 @@ def PatientDashboard():
             ft.Container(
                 content=ft.Column([
                     ft.Row([
-                        ft.Icon(ft.Icons.WARNING, color="error", size=24),
+                        ft.Icon(ft.icons.WARNING, color="error", size=24),
                         ft.Text("Low Stock Alert", size=13, weight="bold", color="error"),
                     ], spacing=5),
                     ft.Text(
@@ -238,7 +238,7 @@ def PatientDashboard():
                     create_notification(
                         f"{medicine} prescription approved",
                         created,
-                        ft.Icons.CHECK_CIRCLE,
+                        ft.icons.CHECK_CIRCLE,
                         "primary"
                     )
                 )
@@ -247,7 +247,7 @@ def PatientDashboard():
                     create_notification(
                         f"{medicine} prescription pending review",
                         created,
-                        ft.Icons.PENDING,
+                        ft.icons.PENDING,
                         "tertiary"
                     )
                 )
@@ -257,7 +257,7 @@ def PatientDashboard():
         notification_widgets.append(
             ft.Container(
                 content=ft.Column([
-                    ft.Icon(ft.Icons.NOTIFICATIONS_NONE, size=40, color="outline"),
+                    ft.Icon(ft.icons.NOTIFICATIONS_NONE, size=40, color="outline"),
                     ft.Text("No notifications", color="outline"),
                 ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=5),
                 padding=20,
@@ -269,7 +269,7 @@ def PatientDashboard():
         # Header section
         ft.Container(
             content=ft.Row([
-                ft.Icon(ft.Icons.WAVING_HAND, color="tertiary", size=40),
+                ft.Icon(ft.icons.WAVING_HAND, color="tertiary", size=40),
                 ft.Column([
                     ft.Text(
                         f"Welcome back, {user_name}!",
@@ -291,19 +291,19 @@ def PatientDashboard():
             create_stat_card(
                 "Active Prescriptions", 
                 active_prescriptions, 
-                ft.Icons.MEDICATION, 
+                ft.icons.MEDICATION, 
                 "primary"
             ),
             create_stat_card(
                 "Pending Orders", 
                 pending_orders, 
-                ft.Icons.PENDING_ACTIONS, 
+                ft.icons.PENDING_ACTIONS, 
                 "tertiary"
             ),
             create_stat_card(
                 "Completed Orders", 
                 completed_orders, 
-                ft.Icons.CHECK_CIRCLE, 
+                ft.icons.CHECK_CIRCLE, 
                 "primary"
             ),
         ], spacing=15, expand=True),
@@ -317,19 +317,19 @@ def PatientDashboard():
                 ft.Row([
                     create_action_button(
                         "Browse Medicines", 
-                        ft.Icons.SEARCH, 
+                        ft.icons.SEARCH, 
                         "/patient/search", 
                         "primary"
                     ),
                     create_action_button(
                         "Upload Prescription", 
-                        ft.Icons.UPLOAD_FILE, 
+                        ft.icons.UPLOAD_FILE, 
                         "/patient/prescriptions", 
                         "secondary"
                     ),
                     create_action_button(
                         "View Cart", 
-                        ft.Icons.SHOPPING_CART, 
+                        ft.icons.SHOPPING_CART, 
                         "/patient/cart", 
                         "tertiary"
                     ),

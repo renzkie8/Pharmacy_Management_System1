@@ -59,7 +59,7 @@ def InvoicesListView():
     
     search_field = ft.TextField(
         hint_text="Search by invoice #, customer name...",
-        prefix_icon=ft.Icons.SEARCH,
+        prefix_icon=ft.icons.SEARCH,
         border_color="primary",
         expand=True,
     )
@@ -129,7 +129,7 @@ def InvoicesListView():
                 ft.Row([
                     ft.Column([
                         ft.Row([
-                            ft.Icon(ft.Icons.RECEIPT, color="primary", size=20),
+                            ft.Icon(ft.icons.RECEIPT, color="primary", size=20),
                             ft.Text(f"Invoice #{inv_number}", size=16, weight="bold"),
                         ], spacing=5),
                         ft.Text(f"Customer: {patient_name} (ID: {patient_id})", size=13, color="outline"),
@@ -169,7 +169,7 @@ def InvoicesListView():
                 # Meta transaction timestamps
                 ft.Container(
                     content=ft.Row([
-                        ft.Icon(ft.Icons.CHECK_CIRCLE, size=14, color="primary"),
+                        ft.Icon(ft.icons.CHECK_CIRCLE, size=14, color="primary"),
                         ft.Text(f"Paid on: {payment_date}", size=12, italic=True),
                     ], spacing=5),
                     visible=status == "Paid",
@@ -182,7 +182,7 @@ def InvoicesListView():
                 ft.Row([
                     ft.ElevatedButton(
                         "View Details",
-                        icon=ft.Icons.VISIBILITY,
+                        icon=ft.icons.VISIBILITY,
                         bgcolor="primary",
                         color="white",
                         on_click=lambda e, inv_id=inv_id: view_invoice_detail(e, inv_id),
@@ -191,7 +191,7 @@ def InvoicesListView():
                     # Update payment state
                     ft.OutlinedButton(
                         "Mark as Paid",
-                        icon=ft.Icons.PAYMENT,
+                        icon=ft.icons.PAYMENT,
                         disabled=(status == "Paid" or status == "Cancelled"),
                         on_click=lambda e, inv_id=inv_id: mark_as_paid(e, inv_id),
                     ),
@@ -199,7 +199,7 @@ def InvoicesListView():
                     # Update cancellation state
                     ft.TextButton(
                         "Cancel Invoice",
-                        icon=ft.Icons.DELETE,
+                        icon=ft.icons.DELETE,
                         icon_color="error",
                         style=ft.ButtonStyle(color="error"),
                         disabled=(status == "Paid" or status == "Cancelled"),
@@ -265,7 +265,7 @@ def InvoicesListView():
             invoices_container.controls.append(
                 ft.Container(
                     content=ft.Row([
-                        ft.Icon(ft.Icons.INFO_OUTLINE, color="primary"),
+                        ft.Icon(ft.icons.INFO_OUTLINE, color="primary"),
                         ft.Text(f"Showing {len(invoices)} invoice(s) | Total: ₱{total_amount:,.2f}", weight="bold"),
                     ]),
                     padding=15,
@@ -281,7 +281,7 @@ def InvoicesListView():
             invoices_container.controls.append(
                 ft.Container(
                     content=ft.Column([
-                        ft.Icon(ft.Icons.SEARCH_OFF, size=80, color="outline"),
+                        ft.Icon(ft.icons.SEARCH_OFF, size=80, color="outline"),
                         ft.Text("No invoices found", size=18, color="outline"),
                         ft.Text("Try adjusting your filters or create a new invoice", size=14, color="outline"),
                     ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
@@ -311,7 +311,7 @@ def InvoicesListView():
                 ft.Row([
                     ft.ElevatedButton(
                         "Create New Invoice",
-                        icon=ft.Icons.ADD,
+                        icon=ft.icons.ADD,
                         bgcolor="primary",
                         color="white",
                         on_click=lambda e: e.page.go("/billing/create-invoice"),
@@ -335,7 +335,7 @@ def InvoicesListView():
                     search_field,
                     ft.ElevatedButton(
                         "Apply Filters",
-                        icon=ft.Icons.FILTER_ALT,
+                        icon=ft.icons.FILTER_ALT,
                         bgcolor="primary",
                         color="white",
                         on_click=load_invoices,

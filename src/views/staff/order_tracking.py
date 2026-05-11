@@ -99,7 +99,7 @@ def StaffOrderTracking():
         items_list = []
         for item in items:
             med_name, qty, unit_price, is_approved, pharm_name, pharm_notes = item[1], item[2], item[3], item[4], item[5], item[6]
-            approval_icon = ft.Icon(ft.Icons.CHECK_CIRCLE, color="green", size=16) if is_approved else ft.Icon(ft.Icons.PENDING, color="orange", size=16)
+            approval_icon = ft.Icon(ft.icons.CHECK_CIRCLE, color="green", size=16) if is_approved else ft.Icon(ft.icons.PENDING, color="orange", size=16)
             approval_text = "✅ Approved by Pharmacist" if is_approved else "⏳ Waiting for Pharmacist Approval"
             
             items_list.append(
@@ -166,10 +166,10 @@ def StaffOrderTracking():
                 
                 # Discount section if requested
                 *([ft.Row([
-                    ft.Icon(ft.Icons.DISCOUNT, size=16, color="green" if discount_verified == 1 else "orange"),
+                    ft.Icon(ft.icons.DISCOUNT, size=16, color="green" if discount_verified == 1 else "orange"),
                     ft.Text(f"Discount Requested: {discount_request}", weight="bold", color="green" if discount_verified == 1 else "orange"),
                     ft.Text("(Verified)" if discount_verified == 1 else "(Pending Verification)", size=12, color="green" if discount_verified == 1 else "orange", italic=True),
-                    *([ft.ElevatedButton("Verify Discount", icon=ft.Icons.VERIFIED, on_click=verify_discount, bgcolor="green", color="white", height=30, style=ft.ButtonStyle(padding=5))] if discount_verified == 0 and not is_locked else [])
+                    *([ft.ElevatedButton("Verify Discount", icon=ft.icons.VERIFIED, on_click=verify_discount, bgcolor="green", color="white", height=30, style=ft.ButtonStyle(padding=5))] if discount_verified == 0 and not is_locked else [])
                 ], spacing=8)] if discount_request and discount_request != "None" else []),
                 
                 ft.Divider(),
@@ -211,31 +211,31 @@ def StaffOrderTracking():
                     ft.Row([
                         ft.ElevatedButton(
                             "Pending",
-                            icon=ft.Icons.PENDING_ACTIONS,
+                            icon=ft.icons.PENDING_ACTIONS,
                             on_click=lambda e: update_status("Pending"),
                             disabled=is_locked,
                         ),
                         ft.ElevatedButton(
                             "Processing",
-                            icon=ft.Icons.HOURGLASS_BOTTOM,
+                            icon=ft.icons.HOURGLASS_BOTTOM,
                             on_click=lambda e: update_status("Processing"),
                             disabled=is_locked,
                         ),
                         ft.ElevatedButton(
                             "Ready",
-                            icon=ft.Icons.CHECK_BOX,
+                            icon=ft.icons.CHECK_BOX,
                             on_click=lambda e: update_status("Ready"),
                             disabled=is_locked,
                         ),
                         ft.ElevatedButton(
                             "Completed",
-                            icon=ft.Icons.DONE_ALL,
+                            icon=ft.icons.DONE_ALL,
                             on_click=lambda e: update_status("Completed"),
                             disabled=is_locked,
                         ),
                         ft.ElevatedButton(
                             "Cancelled",
-                            icon=ft.Icons.CANCEL,
+                            icon=ft.icons.CANCEL,
                             on_click=lambda e: update_status("Cancelled"),
                             disabled=is_locked,
                         ),
@@ -291,7 +291,7 @@ def StaffOrderTracking():
                 status_dropdown,
                 ft.ElevatedButton(
                     "Search",
-                    icon=ft.Icons.SEARCH,
+                    icon=ft.icons.SEARCH,
                     on_click=refresh_orders,
                 ),
             ], spacing=15),

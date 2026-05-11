@@ -28,7 +28,7 @@ def AllPatientsView():
     # Configure visibility for dark mode
     search_field = ft.TextField(
         hint_text="Quick filter by name...",
-        prefix_icon=ft.Icons.FILTER_LIST,
+        prefix_icon=ft.icons.FILTER_LIST,
         expand=True,
         border_color="primary",
     )
@@ -42,7 +42,7 @@ def AllPatientsView():
                 
                 # Avatar
                 ft.Container(
-                    content=ft.Icon(ft.Icons.PERSON, size=20, color="onSecondaryContainer"),
+                    content=ft.Icon(ft.icons.PERSON, size=20, color="onSecondaryContainer"),
                     bgcolor="secondaryContainer", width=40, height=40, border_radius=20,
                     alignment=ft.alignment.center
                 ),
@@ -61,7 +61,7 @@ def AllPatientsView():
                 
                 # View Details Button
                 ft.IconButton(
-                    icon=ft.Icons.VISIBILITY,
+                    icon=ft.icons.VISIBILITY,
                     tooltip="View Details",
                     icon_color="primary",
                     # Append '/all' to origin route for state recovery

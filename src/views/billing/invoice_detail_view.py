@@ -49,13 +49,13 @@ def InvoiceDetailView(invoice_id):
         return ft.Column([
             ft.Container(
                 content=ft.Column([
-                    ft.Icon(ft.Icons.ERROR_OUTLINE, size=80, color="error"),
+                    ft.Icon(ft.icons.ERROR_OUTLINE, size=80, color="error"),
                     ft.Text("Invoice Not Found", size=24, weight="bold"),
                     ft.Text(f"Invoice #{invoice_id} does not exist", size=14, color="outline"),
                     ft.Container(height=20),
                     ft.ElevatedButton(
                         "Back to Invoices",
-                        icon=ft.Icons.ARROW_BACK,
+                        icon=ft.icons.ARROW_BACK,
                         on_click=lambda e: e.page.go("/billing/invoices"),
                         bgcolor="primary",
                         color="white",

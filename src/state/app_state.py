@@ -65,10 +65,10 @@ class AppState:
             "info": "primary"
         }
         icons = {
-            "success": ft.Icons.CHECK_CIRCLE,
-            "error": ft.Icons.ERROR,
-            "warning": ft.Icons.WARNING,
-            "info": ft.Icons.INFO
+            "success": ft.icons.CHECK_CIRCLE,
+            "error": ft.icons.ERROR,
+            "warning": ft.icons.WARNING,
+            "info": ft.icons.INFO
         }
 
         # Create a simple dialog as toast
@@ -81,7 +81,7 @@ class AppState:
             inset_padding=0,
             content=ft.Container(
                 content=ft.Row([
-                    ft.Icon(icons.get(type, ft.Icons.INFO), color="white", size=20),
+                    ft.Icon(icons.get(type, ft.icons.INFO), color="white", size=20),
                     ft.Text(message, color="white", size=13, expand=True),
                 ], spacing=10, alignment=ft.MainAxisAlignment.CENTER),
                 bgcolor=colors.get(type, "primary"),

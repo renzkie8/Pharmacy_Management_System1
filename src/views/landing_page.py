@@ -14,10 +14,10 @@ def LandingPage(page: ft.Page):
     # Initialize theme toggle
     def toggle_theme(e):
         page.theme_mode = ft.ThemeMode.DARK if page.theme_mode == ft.ThemeMode.LIGHT else ft.ThemeMode.LIGHT
-        e.control.icon = ft.Icons.LIGHT_MODE if page.theme_mode == ft.ThemeMode.DARK else ft.Icons.DARK_MODE
+        e.control.icon = ft.icons.LIGHT_MODE if page.theme_mode == ft.ThemeMode.DARK else ft.icons.DARK_MODE
         page.update()
 
-    theme_icon_name = ft.Icons.LIGHT_MODE if page.theme_mode == ft.ThemeMode.DARK else ft.Icons.DARK_MODE
+    theme_icon_name = ft.icons.LIGHT_MODE if page.theme_mode == ft.ThemeMode.DARK else ft.icons.DARK_MODE
     theme_toggle_btn = ft.IconButton(
         icon=theme_icon_name, 
         on_click=toggle_theme, 
@@ -45,8 +45,8 @@ def LandingPage(page: ft.Page):
         )
 
     # Render authentication form
-    login_user = create_input("Username or Email", icon=ft.Icons.PERSON)
-    login_pass = create_input("Password", password=True, icon=ft.Icons.LOCK)
+    login_user = create_input("Username or Email", icon=ft.icons.PERSON)
+    login_pass = create_input("Password", password=True, icon=ft.icons.LOCK)
     
     login_role = ft.Dropdown(
         label="Select Role",
@@ -67,13 +67,13 @@ def LandingPage(page: ft.Page):
     login_error = ft.Text(color="error", size=12, text_align="center")
 
     # Render registration form
-    su_f_name = create_input("First Name", icon=ft.Icons.BADGE)
-    su_l_name = create_input("Last Name", icon=ft.Icons.BADGE)
-    su_user = create_input("Username", icon=ft.Icons.PERSON)
-    su_email = create_input("Email Address", icon=ft.Icons.EMAIL)
-    su_pass = create_input("Create Password", password=True, icon=ft.Icons.LOCK)
-    su_phone = create_input("Phone Number", icon=ft.Icons.PHONE)
-    su_address = create_input("Address", icon=ft.Icons.LOCATION_ON)
+    su_f_name = create_input("First Name", icon=ft.icons.BADGE)
+    su_l_name = create_input("Last Name", icon=ft.icons.BADGE)
+    su_user = create_input("Username", icon=ft.icons.PERSON)
+    su_email = create_input("Email Address", icon=ft.icons.EMAIL)
+    su_pass = create_input("Create Password", password=True, icon=ft.icons.LOCK)
+    su_phone = create_input("Phone Number", icon=ft.icons.PHONE)
+    su_address = create_input("Address", icon=ft.icons.LOCATION_ON)
 
     su_role = ft.Dropdown(
         label="Register As",
@@ -430,7 +430,7 @@ def LandingPage(page: ft.Page):
                 padding=ft.padding.only(top=20)
             ),
             ft.Container(height=40),
-            ft.Icon(ft.Icons.MONITOR_HEART, size=60, color=ft.colors.WHITE30)
+            ft.Icon(ft.icons.MONITOR_HEART, size=60, color=ft.colors.WHITE30)
         ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, alignment=ft.MainAxisAlignment.CENTER)
     )
 

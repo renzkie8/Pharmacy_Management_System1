@@ -65,7 +65,7 @@ def StaffPatientDetail(patient_id, source="search"):
                 # Render patient contextual header
                 ft.Container(
                     content=ft.Row([
-                        ft.Icon(ft.Icons.ACCOUNT_CIRCLE, size=80, color="primary"),
+                        ft.Icon(ft.icons.ACCOUNT_CIRCLE, size=80, color="primary"),
                         ft.Column([
                             ft.Text(patient['full_name'], size=24, weight="bold"),
                             ft.Text(f"ID: {patient['id']}", size=14, color="outline"),
@@ -86,8 +86,8 @@ def StaffPatientDetail(patient_id, source="search"):
                 # Contact Info Row
                 ft.Text("Contact Info", size=18, weight="bold"),
                 ft.Row([
-                    info_tile("Email Address", patient['email'], ft.Icons.EMAIL),
-                    info_tile("Phone Number", patient['phone'], ft.Icons.PHONE),
+                    info_tile("Email Address", patient['email'], ft.icons.EMAIL),
+                    info_tile("Phone Number", patient['phone'], ft.icons.PHONE),
                 ]),
                 
                 ft.Container(height=10),
@@ -95,8 +95,8 @@ def StaffPatientDetail(patient_id, source="search"):
                 # Personal Info Row
                 ft.Text("Personal Details", size=18, weight="bold"),
                 ft.Row([
-                    info_tile("Date of Birth", patient['dob'], ft.Icons.CAKE),
-                    info_tile("Home Address", patient['address'], ft.Icons.HOME),
+                    info_tile("Date of Birth", patient['dob'], ft.icons.CAKE),
+                    info_tile("Home Address", patient['address'], ft.icons.HOME),
                 ]),
                 
                 ft.Container(height=30),
@@ -104,7 +104,7 @@ def StaffPatientDetail(patient_id, source="search"):
                 # Display read-only restriction
                 ft.Container(
                     content=ft.Row([
-                        ft.Icon(ft.Icons.LOCK, color="white"),
+                        ft.Icon(ft.icons.LOCK, color="white"),
                         ft.Text("You are viewing this record in Read-Only mode.", color="white")
                     ], alignment=ft.MainAxisAlignment.CENTER),
                     bgcolor="grey",

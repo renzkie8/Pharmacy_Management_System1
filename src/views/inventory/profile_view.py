@@ -61,11 +61,11 @@ def InventoryProfileView():
                 text_size=14,
             )
 
-        full_name_field = create_input("Full Name", user_data.get('full_name'), ft.Icons.PERSON)
-        email_field = create_input("Email", user_data.get('email'), ft.Icons.EMAIL)
-        phone_field = create_input("Phone", user_data.get('phone'), ft.Icons.PHONE)
-        dob_field = create_input("Date of Birth (YYYY-MM-DD)", user_data.get('dob'), ft.Icons.CAKE)
-        address_field = create_input("Address", user_data.get('address'), ft.Icons.HOME, multiline=True)
+        full_name_field = create_input("Full Name", user_data.get('full_name'), ft.icons.PERSON)
+        email_field = create_input("Email", user_data.get('email'), ft.icons.EMAIL)
+        phone_field = create_input("Phone", user_data.get('phone'), ft.icons.PHONE)
+        dob_field = create_input("Date of Birth (YYYY-MM-DD)", user_data.get('dob'), ft.icons.CAKE)
+        address_field = create_input("Address", user_data.get('address'), ft.icons.HOME, multiline=True)
         
         def save_changes(dialog_e):
             conn = get_db_connection()
@@ -112,7 +112,7 @@ def InventoryProfileView():
         
         edit_dialog = ft.AlertDialog(
             modal=True,
-            title=ft.Row([ft.Icon(ft.Icons.EDIT, color="primary"), ft.Text("Edit Profile")]),
+            title=ft.Row([ft.Icon(ft.icons.EDIT, color="primary"), ft.Text("Edit Profile")]),
             bgcolor="surface",
             shape=ft.RoundedRectangleBorder(radius=12),
             content=ft.Container(
@@ -144,9 +144,9 @@ def InventoryProfileView():
                 border_color="primary"
             )
 
-        current_password = create_pass_input("Current Password", ft.Icons.LOCK_OUTLINE)
-        new_password = create_pass_input("New Password", ft.Icons.LOCK)
-        confirm_password = create_pass_input("Confirm New Password", ft.Icons.LOCK_RESET)
+        current_password = create_pass_input("Current Password", ft.icons.LOCK_OUTLINE)
+        new_password = create_pass_input("New Password", ft.icons.LOCK)
+        confirm_password = create_pass_input("Confirm New Password", ft.icons.LOCK_RESET)
         error_text = ft.Text("", color="error", size=12)
         
         def save_password(dialog_e):
@@ -182,7 +182,7 @@ def InventoryProfileView():
         
         pwd_dialog = ft.AlertDialog(
             modal=True,
-            title=ft.Row([ft.Icon(ft.Icons.LOCK_RESET, color="primary"), ft.Text("Change Password")]),
+            title=ft.Row([ft.Icon(ft.icons.LOCK_RESET, color="primary"), ft.Text("Change Password")]),
             bgcolor="surface",
             shape=ft.RoundedRectangleBorder(radius=12),
             content=ft.Container(
@@ -213,7 +213,7 @@ def InventoryProfileView():
         confirm_dialog = ft.AlertDialog(
             modal=True,
             title=ft.Row([
-                ft.Icon(ft.Icons.LOGOUT, color="error"),
+                ft.Icon(ft.icons.LOGOUT, color="error"),
                 ft.Text("Confirm Logout")
             ]),
             content=ft.Text("Are you sure you want to logout?", size=14),
@@ -239,7 +239,7 @@ def InventoryProfileView():
                     height=100,
                     bgcolor="primaryContainer",
                     border_radius=50,
-                    content=ft.Icon(ft.Icons.INVENTORY_2, size=50, color="onPrimaryContainer"),
+                    content=ft.Icon(ft.icons.INVENTORY_2, size=50, color="onPrimaryContainer"),
                     alignment=ft.alignment.center,
                 ),
                 ft.Column([
@@ -255,7 +255,7 @@ def InventoryProfileView():
                 
                 ft.ElevatedButton(
                     "Logout",
-                    icon=ft.Icons.LOGOUT,
+                    icon=ft.icons.LOGOUT,
                     bgcolor="error",
                     color="onError",
                     on_click=logout,
@@ -275,11 +275,11 @@ def InventoryProfileView():
         # Contact information grid
         ft.Row([
             ft.Column([
-                create_info_row("Email", txt_email, ft.Icons.EMAIL),
+                create_info_row("Email", txt_email, ft.icons.EMAIL),
             ], spacing=10, expand=True),
             
             ft.Column([
-                create_info_row("Phone", txt_phone, ft.Icons.PHONE),
+                create_info_row("Phone", txt_phone, ft.icons.PHONE),
             ], spacing=10, expand=True),
         ], spacing=15),
 
@@ -287,11 +287,11 @@ def InventoryProfileView():
 
         ft.Row([
             ft.Column([
-                create_info_row("Date of Birth", txt_dob, ft.Icons.CAKE),
+                create_info_row("Date of Birth", txt_dob, ft.icons.CAKE),
             ], spacing=10, expand=True),
             
             ft.Column([
-                create_info_row("Address", txt_address, ft.Icons.HOME),
+                create_info_row("Address", txt_address, ft.icons.HOME),
             ], spacing=10, expand=True),
         ], spacing=15),
         
@@ -307,12 +307,12 @@ def InventoryProfileView():
             # Edit Profile
             ft.Container(
                 content=ft.Row([
-                    ft.Icon(ft.Icons.EDIT, color="primary", size=24),
+                    ft.Icon(ft.icons.EDIT, color="primary", size=24),
                     ft.Column([
                         ft.Text("Edit Profile", size=14, weight="bold"),
                         ft.Text("Update your personal information", size=12, color="outline"),
                     ], spacing=2, expand=True),
-                    ft.Icon(ft.Icons.CHEVRON_RIGHT, color="outline"),
+                    ft.Icon(ft.icons.CHEVRON_RIGHT, color="outline"),
                 ], spacing=15),
                 padding=15,
                 border=ft.border.all(1, "outlineVariant"),
@@ -324,12 +324,12 @@ def InventoryProfileView():
             # Change Password
             ft.Container(
                 content=ft.Row([
-                    ft.Icon(ft.Icons.LOCK, color="secondary", size=24),
+                    ft.Icon(ft.icons.LOCK, color="secondary", size=24),
                     ft.Column([
                         ft.Text("Change Password", size=14, weight="bold"),
                         ft.Text("Update your account password", size=12, color="outline"),
                     ], spacing=2, expand=True),
-                    ft.Icon(ft.Icons.CHEVRON_RIGHT, color="outline"),
+                    ft.Icon(ft.icons.CHEVRON_RIGHT, color="outline"),
                 ], spacing=15),
                 padding=15,
                 border=ft.border.all(1, "outlineVariant"),

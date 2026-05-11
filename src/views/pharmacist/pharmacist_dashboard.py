@@ -154,7 +154,7 @@ def PharmacistDashboard():
                     border_radius=15,
                 ),
                 ft.IconButton(
-                    icon=ft.Icons.ARROW_FORWARD,
+                    icon=ft.icons.ARROW_FORWARD,
                     icon_color="primary",
                     tooltip="Review Prescription",
                     on_click=lambda e, rx_id=rx[0]: e.page.go(f"/pharmacist/prescription/{rx_id}"),
@@ -204,7 +204,7 @@ def PharmacistDashboard():
         pending_rx_widgets.append(
             ft.Container(
                 content=ft.Column([
-                    ft.Icon(ft.Icons.CHECK_CIRCLE_OUTLINE, size=60, color="primary"),
+                    ft.Icon(ft.icons.CHECK_CIRCLE_OUTLINE, size=60, color="primary"),
                     ft.Text("No pending prescriptions!", size=16, color="outline"),
                     ft.Text("Great job! All prescriptions have been reviewed.", size=12, color="outline"),
                 ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
@@ -232,7 +232,7 @@ def PharmacistDashboard():
         alert_widgets.append(
             create_alert_item(
                 f"{low_stock_count} medicine(s) are low in stock",
-                ft.Icons.WARNING,
+                ft.icons.WARNING,
                 "error"
             )
         )
@@ -242,7 +242,7 @@ def PharmacistDashboard():
             alert_widgets.append(
                 ft.Container(
                     content=ft.Row([
-                        ft.Icon(ft.Icons.MEDICATION, size=16, color="error"),
+                        ft.Icon(ft.icons.MEDICATION, size=16, color="error"),
                         ft.Text(f"{med[0]}: {med[1]} units left", size=12, expand=True),
                     ], spacing=5),
                     padding=8,
@@ -256,7 +256,7 @@ def PharmacistDashboard():
         alert_widgets.append(
             create_alert_item(
                 f"{pending_rx} prescriptions need review",
-                ft.Icons.PRIORITY_HIGH,
+                ft.icons.PRIORITY_HIGH,
                 "tertiary"
             )
         )
@@ -264,7 +264,7 @@ def PharmacistDashboard():
         alert_widgets.append(
             create_alert_item(
                 f"{pending_rx} prescription(s) waiting for review",
-                ft.Icons.INFO,
+                ft.icons.INFO,
                 "primary"
             )
         )
@@ -274,7 +274,7 @@ def PharmacistDashboard():
         alert_widgets.append(
             create_alert_item(
                 "All systems normal - No critical alerts",
-                ft.Icons.CHECK_CIRCLE,
+                ft.icons.CHECK_CIRCLE,
                 "primary"
             )
         )
@@ -293,27 +293,27 @@ def PharmacistDashboard():
             create_stat_card(
                 "Pending Reviews",
                 pending_rx,
-                ft.Icons.PENDING_ACTIONS,
+                ft.icons.PENDING_ACTIONS,
                 "tertiary",
                 "Requires action"
             ),
             create_stat_card(
                 "Approved Today",
                 approved_rx,
-                ft.Icons.CHECK_CIRCLE,
+                ft.icons.CHECK_CIRCLE,
                 "primary",
                 "This shift"
             ),
             create_stat_card(
                 "Total Customers",
                 total_patients,
-                ft.Icons.PEOPLE,
+                ft.icons.PEOPLE,
                 "secondary",
             ),
             create_stat_card(
                 "Medicines Available",
                 medicines_available,
-                ft.Icons.MEDICATION,
+                ft.icons.MEDICATION,
                 "primary",
             ),
         ], spacing=15),
@@ -327,25 +327,25 @@ def PharmacistDashboard():
                 ft.Row([
                     create_action_button(
                         "Review Prescriptions",
-                        ft.Icons.ASSIGNMENT,
+                        ft.icons.ASSIGNMENT,
                         "/pharmacist/prescriptions",
                         "primary",
                     ),
                     create_action_button(
                         "Search Medicines",
-                        ft.Icons.SEARCH,
+                        ft.icons.SEARCH,
                         "/pharmacist/medicines",
                         "secondary",
                     ),
                     create_action_button(
                         "Generate Report",
-                        ft.Icons.ANALYTICS,
+                        ft.icons.ANALYTICS,
                         "/pharmacist/reports",
                         "tertiary",
                     ),
                     create_action_button(
                         "Verify Orders",
-                        ft.Icons.VERIFIED,
+                        ft.icons.VERIFIED,
                         "/staff/orders",
                         "primary",
                     ),
@@ -365,7 +365,7 @@ def PharmacistDashboard():
             ft.Container(
                 content=ft.Column([
                     ft.Row([
-                        ft.Icon(ft.Icons.PRIORITY_HIGH, color="tertiary", size=24),
+                        ft.Icon(ft.icons.PRIORITY_HIGH, color="tertiary", size=24),
                         ft.Text("Prescriptions Requiring Review", size=20, weight="bold"),
                     ], spacing=10),
                     ft.Divider(),
@@ -389,7 +389,7 @@ def PharmacistDashboard():
             ft.Container(
                 content=ft.Column([
                     ft.Row([
-                        ft.Icon(ft.Icons.NOTIFICATIONS_ACTIVE, color="error", size=24),
+                        ft.Icon(ft.icons.NOTIFICATIONS_ACTIVE, color="error", size=24),
                         ft.Text("Alerts & Notifications", size=20, weight="bold"),
                     ], spacing=10),
                     ft.Divider(),
