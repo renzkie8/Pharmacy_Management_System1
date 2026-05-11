@@ -1,3 +1,4 @@
-flet
+flet==0.20.2
+flet-fastapi==0.20.2
 uvicorn
 fastapi
