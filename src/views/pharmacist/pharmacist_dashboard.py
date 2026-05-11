@@ -149,7 +149,7 @@ def PharmacistDashboard():
                 ], spacing=3, expand=True),
                 ft.Container(
                     content=ft.Text("Pending", size=12, weight="bold", color="onTertiaryContainer"),
-                    bgcolor=ft.Colors.with_opacity(0.2, "tertiary"),
+                    bgcolor=ft.colors.with_opacity(0.2, "tertiary"),
                     padding=ft.padding.symmetric(horizontal=12, vertical=6),
                     border_radius=15,
                 ),
@@ -176,7 +176,7 @@ def PharmacistDashboard():
             padding=12,
             border=ft.border.all(1, color),
             border_radius=8,
-            bgcolor=ft.Colors.with_opacity(0.05, color),
+            bgcolor=ft.colors.with_opacity(0.05, color),
         )
     
     # UI Component: Activity Log Item

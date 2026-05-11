@@ -118,7 +118,7 @@ def StaffOrderTracking():
                         *([ft.Text(f"📝 {pharm_notes}", size=9, color="outline", italic=True)] if pharm_notes else []),
                     ], spacing=3),
                     padding=10,
-                    bgcolor=ft.Colors.with_opacity(0.05, "green" if is_approved else "orange"),
+                    bgcolor=ft.colors.with_opacity(0.05, "green" if is_approved else "orange"),
                     border_radius=8,
                     border=ft.border.all(1, "green" if is_approved else "orange"),
                 )
@@ -158,7 +158,7 @@ def StaffOrderTracking():
                         ft.Text(phone, size=11, color="outline"),
                     ], spacing=2),
                     ft.Row([
-                        ft.Container(ft.Text(status, weight="bold"), bgcolor=ft.Colors.with_opacity(0.3, color),
+                        ft.Container(ft.Text(status, weight="bold"), bgcolor=ft.colors.with_opacity(0.3, color),
                                     padding=ft.padding.symmetric(horizontal=12, vertical=6), border_radius=20),
                         *(([ft.Text("🔒 LOCKED", size=10, weight="bold", color="red")]) if is_locked else []),
                     ], spacing=10, alignment=ft.MainAxisAlignment.CENTER),
@@ -191,7 +191,7 @@ def StaffOrderTracking():
                     padding=12,
                     border=ft.border.all(2, "green" if all_approved else "orange"),
                     border_radius=8,
-                    bgcolor=ft.Colors.with_opacity(0.08, "green" if all_approved else "orange"),
+                    bgcolor=ft.colors.with_opacity(0.08, "green" if all_approved else "orange"),
                 ),
                 ft.Divider(),
                 

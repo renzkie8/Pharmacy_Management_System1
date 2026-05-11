@@ -321,7 +321,7 @@ def LandingPage(page: ft.Page):
                           style=ft.ButtonStyle(
                               shape=ft.RoundedRectangleBorder(radius=8),
                               bgcolor="#00897b",
-                              color=ft.Colors.WHITE
+                              color=ft.colors.WHITE
                           ), on_click=handle_login),
         login_error,
         ft.Container(height=10),
@@ -346,7 +346,7 @@ def LandingPage(page: ft.Page):
                           style=ft.ButtonStyle(
                               shape=ft.RoundedRectangleBorder(radius=8),
                               bgcolor="#00897b",
-                              color=ft.Colors.WHITE
+                              color=ft.colors.WHITE
                           ), on_click=handle_signup),
         su_error,
     ], spacing=15, visible=False)
@@ -363,7 +363,7 @@ def LandingPage(page: ft.Page):
     tab_signup = ft.Container(
         content=ft.Text("Sign Up", size=16, weight="w600", color="outline"),
         padding=ft.padding.only(bottom=10, left=20, right=20),
-        border=ft.border.only(bottom=ft.BorderSide(2, ft.Colors.TRANSPARENT)),
+        border=ft.border.only(bottom=ft.BorderSide(2, ft.colors.TRANSPARENT)),
         on_click=lambda e: switch_tab(e, "signup"),
         ink=True
     )
@@ -373,14 +373,14 @@ def LandingPage(page: ft.Page):
             tab_login.content.color = "#00897b"
             tab_login.border = ft.border.only(bottom=ft.BorderSide(2, "#00897b"))
             tab_signup.content.color = "outline"
-            tab_signup.border = ft.border.only(bottom=ft.BorderSide(2, ft.Colors.TRANSPARENT))
+            tab_signup.border = ft.border.only(bottom=ft.BorderSide(2, ft.colors.TRANSPARENT))
             login_form.visible = True
             signup_form.visible = False
         else:
             tab_signup.content.color = "#00897b"
             tab_signup.border = ft.border.only(bottom=ft.BorderSide(2, "#00897b"))
             tab_login.content.color = "outline"
-            tab_login.border = ft.border.only(bottom=ft.BorderSide(2, ft.Colors.TRANSPARENT))
+            tab_login.border = ft.border.only(bottom=ft.BorderSide(2, ft.colors.TRANSPARENT))
             signup_form.visible = True
             login_form.visible = False
         page.update()
@@ -420,17 +420,17 @@ def LandingPage(page: ft.Page):
         padding=40,
         alignment=ft.alignment.center,
         content=ft.Column([
-            ft.Text("PharmaOps", size=48, weight="bold", color=ft.Colors.WHITE, style=ft.TextStyle(shadow=ft.BoxShadow(blur_radius=10, color=ft.Colors.BLACK26))),
-            ft.Text("Pharmacy Management System", size=18, color=ft.Colors.WHITE70),
+            ft.Text("PharmaOps", size=48, weight="bold", color=ft.colors.WHITE, style=ft.TextStyle(shadow=ft.BoxShadow(blur_radius=10, color=ft.colors.BLACK26))),
+            ft.Text("Pharmacy Management System", size=18, color=ft.colors.WHITE70),
             ft.Container(height=30),
             ft.Container(
                 content=ft.Text("\u201cEfficient Pharmacy Management\nfor Better Healthcare.\u201d", 
-                                size=16, color=ft.Colors.WHITE, text_align="center", italic=True),
-                border=ft.border.only(top=ft.BorderSide(1, ft.Colors.WHITE30)),
+                                size=16, color=ft.colors.WHITE, text_align="center", italic=True),
+                border=ft.border.only(top=ft.BorderSide(1, ft.colors.WHITE30)),
                 padding=ft.padding.only(top=20)
             ),
             ft.Container(height=40),
-            ft.Icon(ft.Icons.MONITOR_HEART, size=60, color=ft.Colors.WHITE30)
+            ft.Icon(ft.Icons.MONITOR_HEART, size=60, color=ft.colors.WHITE30)
         ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, alignment=ft.MainAxisAlignment.CENTER)
     )
 

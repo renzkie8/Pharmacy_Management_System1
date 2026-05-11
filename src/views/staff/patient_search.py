@@ -76,7 +76,7 @@ def StaffPatientSearch():
             border_radius=12,
             bgcolor="surface", # Adapts to theme
             border=ft.border.all(1, "outlineVariant"),
-            shadow=ft.BoxShadow(blur_radius=5, color=ft.Colors.with_opacity(0.05, "black"))
+            shadow=ft.BoxShadow(blur_radius=5, color=ft.colors.with_opacity(0.05, "black"))
         )
     
     # Search Query Execution

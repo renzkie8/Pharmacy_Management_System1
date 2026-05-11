@@ -47,7 +47,7 @@ def PatientInvoicesView():
                             ft.Icon(icon, size=16, color=color),
                             ft.Text(invoice['status'], weight="bold", color=color),
                         ], spacing=5),
-                        bgcolor=ft.Colors.with_opacity(0.1, color),
+                        bgcolor=ft.colors.with_opacity(0.1, color),
                         padding=ft.padding.symmetric(horizontal=12, vertical=6),
                         border_radius=15,
                     ),
@@ -91,7 +91,7 @@ def PatientInvoicesView():
                         ft.Text(invoice['notes'], size=12, italic=True),
                     ], spacing=3),
                     padding=10,
-                    bgcolor=ft.Colors.with_opacity(0.05, "outline"),
+                    bgcolor=ft.colors.with_opacity(0.05, "outline"),
                     border_radius=5,
                 ) if invoice['notes'] else ft.Container(),
                 
@@ -115,7 +115,7 @@ def PatientInvoicesView():
             padding=20,
             border=ft.border.all(2, color),
             border_radius=10,
-            bgcolor=ft.Colors.with_opacity(0.03, color),
+            bgcolor=ft.colors.with_opacity(0.03, color),
         )
     
     def pay_invoice(e, invoice_id):
@@ -301,7 +301,7 @@ def PatientInvoicesView():
                             ]),
                         ], spacing=5),
                         padding=15,
-                        bgcolor=ft.Colors.with_opacity(0.05, "primary"),
+                        bgcolor=ft.colors.with_opacity(0.05, "primary"),
                         border_radius=8,
                         border=ft.border.all(1, "primary"),
                     ),
@@ -324,7 +324,7 @@ def PatientInvoicesView():
                             italic=True,
                         ),
                         padding=10,
-                        bgcolor=ft.Colors.with_opacity(0.05, "tertiary"),
+                        bgcolor=ft.colors.with_opacity(0.05, "tertiary"),
                         border_radius=5,
                     ),
                 ], spacing=10, scroll=ft.ScrollMode.AUTO, tight=True),
@@ -429,7 +429,7 @@ def PatientInvoicesView():
                         ),
                     ], spacing=10),
                     padding=15,
-                    bgcolor=ft.Colors.with_opacity(0.1, "tertiary"),
+                    bgcolor=ft.colors.with_opacity(0.1, "tertiary"),
                     border_radius=8,
                     border=ft.border.all(1, "tertiary"),
                 ),

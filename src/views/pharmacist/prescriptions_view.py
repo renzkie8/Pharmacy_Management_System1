@@ -162,7 +162,7 @@ def PrescriptionsView():
                         ft.Text(rx['notes'], size=12, italic=True),
                     ], spacing=5),
                     visible=bool(rx.get('notes')),
-                    bgcolor=ft.Colors.with_opacity(0.1, "tertiary"),
+                    bgcolor=ft.colors.with_opacity(0.1, "tertiary"),
                     padding=8,
                     border_radius=5,
                 ),

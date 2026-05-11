@@ -152,7 +152,7 @@ def PaymentHistoryView():
                         ], spacing=2),
                     ], spacing=15),
                     padding=20,
-                    bgcolor=ft.Colors.with_opacity(0.05, "primary"),
+                    bgcolor=ft.colors.with_opacity(0.05, "primary"),
                     border_radius=10,
                     border=ft.border.all(1, "primary"),
                 )

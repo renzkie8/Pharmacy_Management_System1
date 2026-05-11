@@ -60,7 +60,7 @@ def main(page: ft.Page):
     except:
         pass
     
-    page.theme = ft.Theme(color_scheme_seed=ft.Colors.TEAL)
+    page.theme = ft.Theme(color_scheme_seed=ft.colors.TEAL)
     page.theme_mode = ft.ThemeMode.LIGHT
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.vertical_alignment = ft.MainAxisAlignment.CENTER 

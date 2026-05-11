@@ -102,7 +102,7 @@ def POSReceiptView(order_id: int):
         shadow=ft.BoxShadow(
             spread_radius=1,
             blur_radius=15,
-            color=ft.Colors.with_opacity(0.1, "#000000"),
+            color=ft.colors.with_opacity(0.1, "#000000"),
             offset=ft.Offset(0, 10),
         ),
         content=ft.Column([
@@ -163,7 +163,7 @@ def POSReceiptView(order_id: int):
                     ft.Text("Discount pending pharmacist verification. Final amount may adjust.", size=10, color="orange", italic=True, expand=True)
                 ], spacing=8),
                 padding=ft.padding.only(top=10, bottom=10),
-                bgcolor=ft.Colors.with_opacity(0.1, "orange"),
+                bgcolor=ft.colors.with_opacity(0.1, "orange"),
                 border_radius=4
             )] if is_discount_pending else []),
             

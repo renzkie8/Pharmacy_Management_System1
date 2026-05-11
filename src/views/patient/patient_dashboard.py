@@ -157,7 +157,7 @@ def PatientDashboard():
                         weight="bold", 
                         color="onPrimaryContainer"
                     ),
-                    bgcolor=ft.Colors.with_opacity(0.1, status_color),
+                    bgcolor=ft.colors.with_opacity(0.1, status_color),
                     padding=ft.padding.symmetric(horizontal=10, vertical=5),
                     border_radius=5,
                 ),
@@ -222,7 +222,7 @@ def PatientDashboard():
                 padding=10,
                 border=ft.border.all(1, "error"),
                 border_radius=8,
-                bgcolor=ft.Colors.with_opacity(0.05, "error"),
+                bgcolor=ft.colors.with_opacity(0.05, "error"),
             )
         )
     

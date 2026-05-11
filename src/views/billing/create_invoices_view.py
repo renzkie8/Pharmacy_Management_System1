@@ -184,7 +184,7 @@ def CreateInvoicesView():
             content=ft.Column([
                 ft.Container(
                     content=ft.Row([ft.Icon(ft.Icons.INFO_OUTLINE, color="primary"), ft.Text("Create a new invoice for a customer. You can link it to an existing order or enter manual amounts.", size=13, expand=True)], spacing=10),
-                    padding=15, bgcolor=ft.Colors.with_opacity(0.1, "primary"), border_radius=8
+                    padding=15, bgcolor=ft.colors.with_opacity(0.1, "primary"), border_radius=8
                 ),
                 
                 ft.Container(height=20),

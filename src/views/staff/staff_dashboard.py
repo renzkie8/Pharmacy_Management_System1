@@ -180,7 +180,7 @@ def StaffDashboard():
                                     ft.Text("You have Read-Only access to customers.", size=12, expand=True)
                                 ], spacing=10),
                                 padding=15,
-                                bgcolor=ft.Colors.with_opacity(0.1, "tertiary"),
+                                bgcolor=ft.colors.with_opacity(0.1, "tertiary"),
                                 border_radius=10,
                             )
                         ]),

@@ -135,7 +135,7 @@ def PharmacistMedicineSearch():
                                 ft.Row([], spacing=10),
                             ], spacing=10),
                             padding=15,
-                            bgcolor=ft.Colors.with_opacity(0.05, "primary"),
+                            bgcolor=ft.colors.with_opacity(0.05, "primary"),
                             border_radius=8,
                         ),
                     ],

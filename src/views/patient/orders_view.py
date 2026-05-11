@@ -100,7 +100,7 @@ def OrdersView():
                     ], spacing=2),
                     ft.Container(
                         content=ft.Text(status, size=12, weight="bold", color="onPrimaryContainer"),
-                        bgcolor=ft.Colors.with_opacity(0.2, status_color),
+                        bgcolor=ft.colors.with_opacity(0.2, status_color),
                         padding=ft.padding.symmetric(horizontal=12, vertical=6),
                         border_radius=15,
                     ),
@@ -249,7 +249,7 @@ def OrdersView():
         
         # Apply conditional classes
         status = current_filter["value"]
-        style_outline = ft.ButtonStyle(color="primary", bgcolor=ft.Colors.TRANSPARENT, side=ft.BorderSide(1, "primary"))
+        style_outline = ft.ButtonStyle(color="primary", bgcolor=ft.colors.TRANSPARENT, side=ft.BorderSide(1, "primary"))
         style_fill = ft.ButtonStyle(color="white", bgcolor="primary")
         
         if btn_all.current: btn_all.current.style = style_fill if status == "All" else style_outline

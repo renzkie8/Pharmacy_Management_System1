@@ -57,7 +57,7 @@ def PatientPrescriptionsView():
                             ft.Icon(icon, size=16, color=color),
                             ft.Text(rx['status'], weight="bold", color=color),
                         ], spacing=5),
-                        bgcolor=ft.Colors.with_opacity(0.1, color),
+                        bgcolor=ft.colors.with_opacity(0.1, color),
                         padding=ft.padding.symmetric(horizontal=12, vertical=6),
                         border_radius=15,
                     ),
@@ -70,7 +70,7 @@ def PatientPrescriptionsView():
             padding=15,
             border=ft.border.all(1, color),
             border_radius=8,
-            bgcolor=ft.Colors.with_opacity(0.05, color),
+            bgcolor=ft.colors.with_opacity(0.05, color),
         )
     
     # New Prescription Form
@@ -278,7 +278,7 @@ def PatientPrescriptionsView():
                 ft.Text("3. Once approved, you can order the medicine", size=13),
             ], spacing=8),
             padding=15,
-            bgcolor=ft.Colors.with_opacity(0.1, "primary"),
+            bgcolor=ft.colors.with_opacity(0.1, "primary"),
             border_radius=8,
             border=ft.border.all(1, "primary"),
         ),

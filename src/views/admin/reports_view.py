@@ -453,7 +453,7 @@ def ReportsView():
                             ft.Text(f"{len(out_of_stock_items)} items are OUT OF STOCK!", 
                                    size=16, weight="bold", color="error"),
                         ], spacing=10),
-                        bgcolor=ft.Colors.with_opacity(0.1, "error"),
+                        bgcolor=ft.colors.with_opacity(0.1, "error"),
                         padding=15,
                         border_radius=8,
                     ),
@@ -484,7 +484,7 @@ def ReportsView():
                             padding=10,
                             border=ft.border.all(1, "error"),
                             border_radius=8,
-                            bgcolor=ft.Colors.with_opacity(0.05, "error"),
+                            bgcolor=ft.colors.with_opacity(0.05, "error"),
                         )
                     )
                 
@@ -499,7 +499,7 @@ def ReportsView():
                             ft.Text(f"{len(low_stock_items)} items have LOW STOCK (< 10 units)", 
                                    size=16, weight="bold", color="tertiary"),
                         ], spacing=10),
-                        bgcolor=ft.Colors.with_opacity(0.1, "tertiary"),
+                        bgcolor=ft.colors.with_opacity(0.1, "tertiary"),
                         padding=15,
                         border_radius=8,
                     ),

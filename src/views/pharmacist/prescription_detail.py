@@ -250,7 +250,7 @@ def PrescriptionDetailView(prescription_id):
                         ft.Row([ft.Icon(ft.Icons.NOTE_ALT, size=20, color="tertiary"), ft.Text("Customer/Doctor Notes", weight="bold")]),
                         ft.Text(rx['notes'] or "No additional notes", italic=True),
                     ], spacing=5),
-                    bgcolor=ft.Colors.with_opacity(0.05, "tertiary"),
+                    bgcolor=ft.colors.with_opacity(0.05, "tertiary"),
                     padding=15, border_radius=8,
                     border=ft.border.all(1, "tertiary")
                 )

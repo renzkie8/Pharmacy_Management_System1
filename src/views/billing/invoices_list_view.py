@@ -173,7 +173,7 @@ def InvoicesListView():
                         ft.Text(f"Paid on: {payment_date}", size=12, italic=True),
                     ], spacing=5),
                     visible=status == "Paid",
-                    bgcolor=ft.Colors.with_opacity(0.1, "primary"),
+                    bgcolor=ft.colors.with_opacity(0.1, "primary"),
                     padding=8,
                     border_radius=5,
                 ),
@@ -269,7 +269,7 @@ def InvoicesListView():
                         ft.Text(f"Showing {len(invoices)} invoice(s) | Total: ₱{total_amount:,.2f}", weight="bold"),
                     ]),
                     padding=15,
-                    bgcolor=ft.Colors.with_opacity(0.05, "primary"),
+                    bgcolor=ft.colors.with_opacity(0.05, "primary"),
                     border_radius=8,
                 )
             )

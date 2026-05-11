@@ -204,7 +204,7 @@ def SystemLogs():
                 # Icon
                 ft.Container(
                     content=ft.Icon(log['icon'], color=log['color'], size=24),
-                    bgcolor=ft.Colors.with_opacity(0.1, log['color']),
+                    bgcolor=ft.colors.with_opacity(0.1, log['color']),
                     width=50,
                     height=50,
                     border_radius=25,
