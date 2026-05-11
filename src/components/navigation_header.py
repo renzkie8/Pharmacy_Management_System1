@@ -59,9 +59,10 @@ def NavigationHeader(title, subtitle="", show_back=True, show_forward=False, bac
         content=ft.Row(
             controls, 
             spacing=15, 
-            vertical_alignment=ft.CrossAxisAlignment.CENTER,
+            vertical_alignment=ft.CrossAxisAlignment.center,
         ),
         padding=ft.padding.only(left=10, right=20, top=20, bottom=20),
         bgcolor="surface",
         border=ft.border.only(bottom=ft.BorderSide(1, "outlineVariant")),
     )
+

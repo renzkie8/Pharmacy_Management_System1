@@ -6,3 +6,4 @@ from .profile_view import ProfileView
 from .prescription_view import PatientPrescriptionsView
 from .invoices_view import PatientInvoicesView
 __all__ = ['PatientDashboard', 'MedicineSearch', 'CartView', 'OrdersView', 'ProfileView', 'PatientPrescriptionsView', 'PatientInvoicesView']
+

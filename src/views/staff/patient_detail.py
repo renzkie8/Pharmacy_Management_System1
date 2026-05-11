@@ -106,11 +106,12 @@ def StaffPatientDetail(patient_id, source="search"):
                     content=ft.Row([
                         ft.Icon(ft.icons.LOCK, color="white"),
                         ft.Text("You are viewing this record in Read-Only mode.", color="white")
-                    ], alignment=ft.MainAxisAlignment.CENTER),
+                    ], alignment=ft.MainAxisAlignment.center),
                     bgcolor="grey",
                     padding=10,
                     border_radius=8
                 )
             ])
         )
-    ], scroll=ft.ScrollMode.AUTO, spacing=0)
+    ], scroll=ft.ScrollMode.auto, spacing=0)
+

@@ -128,7 +128,7 @@ def BillingProfileView():
                     phone_field,
                     dob_field,
                     address_field,
-                ], spacing=15, scroll=ft.ScrollMode.AUTO, tight=True)
+                ], spacing=15, scroll=ft.ScrollMode.auto, tight=True)
             ),
             actions=[
                 ft.TextButton("Cancel", on_click=lambda e: e.page.close(edit_dialog)),
@@ -335,4 +335,5 @@ def BillingProfileView():
             ),
             
         ], spacing=10),
-    ], scroll=ft.ScrollMode.AUTO, spacing=0)
+    ], scroll=ft.ScrollMode.auto, spacing=0)
+

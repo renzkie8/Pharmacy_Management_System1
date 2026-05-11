@@ -69,7 +69,7 @@ def StaffPatientSearch():
                     ft.Column([
                         ft.Row([ft.Icon(ft.icons.CALENDAR_TODAY, size=16, color="outline"), ft.Text(f"Reg: {patient['created_at'][:10]}", size=13)], spacing=8),
                     ])
-                ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
+                ], alignment=ft.MainAxisAlignment.space_between),
                 
             ], spacing=5),
             padding=20,
@@ -92,7 +92,7 @@ def StaffPatientSearch():
                     content=ft.Column([
                         ft.Icon(ft.icons.SEARCH, size=50, color="outline"),
                         ft.Text("Enter a name or phone number", color="outline"),
-                    ], horizontal_alignment=ft.CrossAxisAlignment.CENTER),
+                    ], horizontal_alignment=ft.CrossAxisAlignment.center),
                     alignment=ft.alignment.center,
                     padding=50
                 )
@@ -175,9 +175,10 @@ def StaffPatientSearch():
             ])
         )
     ], 
-    scroll=ft.ScrollMode.AUTO, 
+    scroll=ft.ScrollMode.auto, 
     spacing=0,
     # Vertical alignment enforcement
-    alignment=ft.MainAxisAlignment.START,
+    alignment=ft.MainAxisAlignment.start,
     expand=True
     )
+

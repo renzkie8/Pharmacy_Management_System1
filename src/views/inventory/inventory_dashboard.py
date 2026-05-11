@@ -45,4 +45,5 @@ def InventoryDashboard():
         ft.Text("Quick Actions", size=20, weight="bold"),
         ft.ElevatedButton("Manage Stock", icon=ft.icons.EDIT, on_click=lambda e: e.page.go("/inventory/stock"), height=50),
         
-    ], scroll=ft.ScrollMode.AUTO)
+    ], scroll=ft.ScrollMode.auto)
+

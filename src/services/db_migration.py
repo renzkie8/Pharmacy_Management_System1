@@ -850,3 +850,4 @@ if __name__ == "__main__":
         run_migration_and_seed()
     else:
         print("❌ Migration cancelled.")        
+

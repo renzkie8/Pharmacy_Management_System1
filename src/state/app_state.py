@@ -83,7 +83,7 @@ class AppState:
                 content=ft.Row([
                     ft.Icon(icons.get(type, ft.icons.INFO), color="white", size=20),
                     ft.Text(message, color="white", size=13, expand=True),
-                ], spacing=10, alignment=ft.MainAxisAlignment.CENTER),
+                ], spacing=10, alignment=ft.MainAxisAlignment.center),
                 bgcolor=colors.get(type, "primary"),
                 padding=15,
                 border_radius=8,
@@ -120,3 +120,4 @@ class AppState:
     @staticmethod
     def emit(event_name, *args, **kwargs):
         AppState.emit_event(event_name, *args, **kwargs)
+

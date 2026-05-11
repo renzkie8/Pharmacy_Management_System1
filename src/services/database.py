@@ -132,3 +132,4 @@ def authenticate_user(username, password):
     user = cursor.fetchone()
     conn.close()
     return user
+

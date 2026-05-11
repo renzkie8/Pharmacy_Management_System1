@@ -61,9 +61,9 @@ def main(page: ft.Page):
         pass
     
     page.theme = ft.Theme(color_scheme_seed=ft.colors.TEAL)
-    page.theme_mode = ft.ThemeMode.LIGHT
-    page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
-    page.vertical_alignment = ft.MainAxisAlignment.CENTER 
+    page.theme_mode = ft.ThemeMode.light
+    page.horizontal_alignment = ft.CrossAxisAlignment.center
+    page.vertical_alignment = ft.MainAxisAlignment.center 
 
     # Initialize database
     init_db()
@@ -72,7 +72,7 @@ def main(page: ft.Page):
         page.views.clear()
         
         # Helper for view creation
-        def create_view(route_path, controls, scroll_mode=ft.ScrollMode.AUTO):
+        def create_view(route_path, controls, scroll_mode=ft.ScrollMode.auto):
             return ft.View(route_path, controls, padding=0, scroll=scroll_mode)
 
         troute = page.route
@@ -201,3 +201,4 @@ if __name__ == "__main__":
     # Initialize OAuth callback listener
     start_callback_server(port=8551)
     ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=8550)
+

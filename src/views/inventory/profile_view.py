@@ -122,7 +122,7 @@ def InventoryProfileView():
                     full_name_field,
                     email_field,
                     phone_field,
-                ], spacing=15, scroll=ft.ScrollMode.AUTO, tight=True)
+                ], spacing=15, scroll=ft.ScrollMode.auto, tight=True)
             ),
             actions=[
                 ft.TextButton("Cancel", on_click=lambda e: e.page.close(edit_dialog)),
@@ -339,4 +339,5 @@ def InventoryProfileView():
             ),
             
         ], spacing=10),
-    ], scroll=ft.ScrollMode.AUTO, spacing=0)
+    ], scroll=ft.ScrollMode.auto, spacing=0)
+

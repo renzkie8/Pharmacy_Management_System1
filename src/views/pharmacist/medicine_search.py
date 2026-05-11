@@ -99,7 +99,7 @@ def PharmacistMedicineSearch():
                                     weight="bold",
                                     color=stock_color,
                                 ),
-                            ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=2),
+                            ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=2),
                             padding=10,
                             border=ft.border.all(1, stock_color),
                             border_radius=8,
@@ -231,7 +231,7 @@ def PharmacistMedicineSearch():
                         ft.Icon(ft.icons.SEARCH_OFF, size=80, color="outline"),
                         ft.Text("No medicines found", size=18, color="outline"),
                         ft.Text("Try adjusting your search criteria", size=14, color="outline"),
-                    ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
+                    ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=10),
                     padding=50,
                 )
             )
@@ -282,4 +282,5 @@ def PharmacistMedicineSearch():
             ], spacing=0),
             padding=20,
         ),
-    ], scroll=ft.ScrollMode.AUTO, spacing=0)
+    ], scroll=ft.ScrollMode.auto, spacing=0)
+

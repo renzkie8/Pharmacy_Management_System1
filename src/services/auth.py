@@ -186,3 +186,4 @@ if __name__ == "__main__":
     for pw in test_passwords:
         result = validate_password_strength(pw)
         print(f"  {pw}: {result['message']}")
+

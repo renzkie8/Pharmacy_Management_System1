@@ -13,11 +13,11 @@ def LandingPage(page: ft.Page):
 
     # Initialize theme toggle
     def toggle_theme(e):
-        page.theme_mode = ft.ThemeMode.DARK if page.theme_mode == ft.ThemeMode.LIGHT else ft.ThemeMode.LIGHT
-        e.control.icon = ft.icons.LIGHT_MODE if page.theme_mode == ft.ThemeMode.DARK else ft.icons.DARK_MODE
+        page.theme_mode = ft.ThemeMode.dark if page.theme_mode == ft.ThemeMode.light else ft.ThemeMode.light
+        e.control.icon = ft.icons.LIGHT_MODE if page.theme_mode == ft.ThemeMode.dark else ft.icons.DARK_MODE
         page.update()
 
-    theme_icon_name = ft.icons.LIGHT_MODE if page.theme_mode == ft.ThemeMode.DARK else ft.icons.DARK_MODE
+    theme_icon_name = ft.icons.LIGHT_MODE if page.theme_mode == ft.ThemeMode.dark else ft.icons.DARK_MODE
     theme_toggle_btn = ft.IconButton(
         icon=theme_icon_name, 
         on_click=toggle_theme, 
@@ -293,7 +293,7 @@ def LandingPage(page: ft.Page):
             content=ft.Row([
                 ft.Image(src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg", width=18, height=18),
                 ft.Text(text, weight="w500", color="onSurface")
-            ], alignment=ft.MainAxisAlignment.CENTER),
+            ], alignment=ft.MainAxisAlignment.center),
             border=ft.border.all(1, "outlineVariant"),
             border_radius=8,
             padding=12,
@@ -325,7 +325,7 @@ def LandingPage(page: ft.Page):
                           ), on_click=handle_login),
         login_error,
         ft.Container(height=10),
-        ft.Row([ft.TextButton("Forgot Password?", style=ft.ButtonStyle(color="#00897b"), on_click=handle_forgot_password)], alignment=ft.MainAxisAlignment.CENTER),
+        ft.Row([ft.TextButton("Forgot Password?", style=ft.ButtonStyle(color="#00897b"), on_click=handle_forgot_password)], alignment=ft.MainAxisAlignment.center),
     ], spacing=15)
 
     # Assemble registration view
@@ -385,7 +385,7 @@ def LandingPage(page: ft.Page):
             login_form.visible = False
         page.update()
 
-    tabs_row = ft.Row([tab_login, tab_signup], alignment=ft.MainAxisAlignment.CENTER, spacing=0)
+    tabs_row = ft.Row([tab_login, tab_signup], alignment=ft.MainAxisAlignment.center, spacing=0)
 
     right_panel = ft.Container(
         expand=1,
@@ -402,11 +402,11 @@ def LandingPage(page: ft.Page):
                     ft.Container(height=20),
                     login_form,
                     signup_form
-                ], horizontal_alignment=ft.CrossAxisAlignment.CENTER)
+                ], horizontal_alignment=ft.CrossAxisAlignment.center)
             ),
             ft.Container(expand=True),
             ft.Text("Group 5: Colico | David | Nonato", size=12, color="outline", text_align="center")
-        ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, scroll=ft.ScrollMode.AUTO, alignment=ft.MainAxisAlignment.CENTER)
+        ], horizontal_alignment=ft.CrossAxisAlignment.center, scroll=ft.ScrollMode.auto, alignment=ft.MainAxisAlignment.center)
     )
 
     # Render branding section
@@ -431,7 +431,7 @@ def LandingPage(page: ft.Page):
             ),
             ft.Container(height=40),
             ft.Icon(ft.icons.MONITOR_HEART, size=60, color=ft.colors.WHITE30)
-        ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, alignment=ft.MainAxisAlignment.CENTER)
+        ], horizontal_alignment=ft.CrossAxisAlignment.center, alignment=ft.MainAxisAlignment.center)
     )
 
     view = ft.Row(
@@ -441,3 +441,4 @@ def LandingPage(page: ft.Page):
     )
 
     return view
+

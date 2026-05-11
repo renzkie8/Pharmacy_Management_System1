@@ -78,7 +78,7 @@ def POSReceiptView(order_id: int):
         return ft.Row([
             ft.Text(label, size=13, weight="bold" if bold else "normal", color=color or "onSurfaceVariant"),
             ft.Text(value, size=13, weight="bold" if bold else "normal", color=color or "onSurfaceVariant", text_align=ft.TextAlign.RIGHT)
-        ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN)
+        ], alignment=ft.MainAxisAlignment.space_between)
 
     # Item List
     items_column = ft.Column(spacing=8)
@@ -91,7 +91,7 @@ def POSReceiptView(order_id: int):
                     ft.Text(f"{qty} x ₱{price:.2f}", size=11, color="outline")
                 ], expand=1, spacing=2),
                 ft.Text(f"₱{item_sub:.2f}", size=13)
-            ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN)
+            ], alignment=ft.MainAxisAlignment.space_between)
         )
 
     receipt_card = ft.Container(
@@ -114,7 +114,7 @@ def POSReceiptView(order_id: int):
                     ft.Text("Official Receipt", size=12, color="outline"),
                     ft.Text("123 Healthcare Blvd, Medical District", size=10, color="outline"),
                     ft.Text("Tel: (02) 8888-9999", size=10, color="outline"),
-                ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=2),
+                ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=2),
                 alignment=ft.alignment.center,
                 padding=ft.padding.only(bottom=20)
             ),
@@ -178,7 +178,7 @@ def POSReceiptView(order_id: int):
                     ),
                     ft.Text("Thank you for choosing PharmaOps!", size=12, italic=True, color="outline"),
                     ft.Text("Please retain this receipt for your records.", size=10, color="outline"),
-                ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=2),
+                ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=2),
                 alignment=ft.alignment.center,
                 padding=ft.padding.only(top=15)
             ),
@@ -198,13 +198,14 @@ def POSReceiptView(order_id: int):
                 ),
                 ft.Text("Digital POS Receipt", size=20, weight="bold", color="onSurface"),
                 ft.Container(width=40) # Spacer
-            ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN, width=400),
+            ], alignment=ft.MainAxisAlignment.space_between, width=400),
             ft.Container(height=20),
             receipt_card,
             ft.Container(height=20),
-        ], horizontal_alignment=ft.CrossAxisAlignment.CENTER),
+        ], horizontal_alignment=ft.CrossAxisAlignment.center),
         expand=True,
         alignment=ft.alignment.center,
         bgcolor="surface", # subtle background
         padding=40
     )
+

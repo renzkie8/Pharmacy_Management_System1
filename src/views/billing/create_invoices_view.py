@@ -195,7 +195,7 @@ def CreateInvoicesView():
                 ft.Container(height=20),
                 
                 ft.Text("Amount Details", size=20, weight="bold"),
-                ft.Row([subtotal_field, tax_field, discount_field, total_field, vat_exempt_checkbox], spacing=15, wrap=True, vertical_alignment=ft.CrossAxisAlignment.CENTER),
+                ft.Row([subtotal_field, tax_field, discount_field, total_field, vat_exempt_checkbox], spacing=15, wrap=True, vertical_alignment=ft.CrossAxisAlignment.center),
                 
                 ft.Container(height=20),
                 
@@ -228,4 +228,5 @@ def CreateInvoicesView():
             padding=40,
             width=900,
         ),
-    ], scroll=ft.ScrollMode.AUTO, spacing=0)
+    ], scroll=ft.ScrollMode.auto, spacing=0)
+

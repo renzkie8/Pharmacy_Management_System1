@@ -67,7 +67,7 @@ def AllPatientsView():
                     # Append '/all' to origin route for state recovery
                     on_click=lambda e, pid=patient['id']: e.page.go(f"/staff/patient/{pid}/all")
                 )
-            ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
+            ], alignment=ft.MainAxisAlignment.space_between),
             
             padding=ft.padding.symmetric(horizontal=15, vertical=10),
             bgcolor="surface",
@@ -154,9 +154,10 @@ def AllPatientsView():
             ])
         )
     ], 
-    scroll=ft.ScrollMode.AUTO, 
+    scroll=ft.ScrollMode.auto, 
     spacing=0,
     # Ensure element alignment begins from top
-    alignment=ft.MainAxisAlignment.START,
+    alignment=ft.MainAxisAlignment.start,
     expand=True
     )
+

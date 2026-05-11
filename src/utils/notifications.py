@@ -74,3 +74,4 @@ SOMETHING_WENT_WRONG = "Something went wrong. Please try again."
 OPERATION_FAILED = "Operation failed. Please try again."
 LOADING = "Loading..."
 OPERATION_SUCCESS = "Operation completed successfully."
+

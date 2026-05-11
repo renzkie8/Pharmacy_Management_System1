@@ -161,7 +161,7 @@ def PatientDashboard():
                     padding=ft.padding.symmetric(horizontal=10, vertical=5),
                     border_radius=5,
                 ),
-            ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
+            ], alignment=ft.MainAxisAlignment.space_between),
             padding=10,
             border=ft.border.all(1, "outlineVariant"),
             border_radius=8,
@@ -195,7 +195,7 @@ def PatientDashboard():
                     ft.Text("No orders yet", color="outline"),
                     ft.Text("Start shopping to create your first order!", 
                            size=12, color="outline"),
-                ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=5),
+                ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=5),
                 padding=20,
                 alignment=ft.alignment.center,
             )
@@ -259,7 +259,7 @@ def PatientDashboard():
                 content=ft.Column([
                     ft.Icon(ft.icons.NOTIFICATIONS_NONE, size=40, color="outline"),
                     ft.Text("No notifications", color="outline"),
-                ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=5),
+                ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=5),
                 padding=20,
                 alignment=ft.alignment.center,
             )
@@ -355,7 +355,7 @@ def PatientDashboard():
                             "View All →", 
                             on_click=lambda e: e.page.go("/patient/orders")
                         ),
-                    ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
+                    ], alignment=ft.MainAxisAlignment.space_between),
                     ft.Divider(),
                     ft.Column(order_widgets, spacing=10, expand=True),
                 ], spacing=10, expand=True),
@@ -382,4 +382,5 @@ def PatientDashboard():
                 height=300,
             ),
         ], spacing=15, expand=True),
-    ], scroll=ft.ScrollMode.AUTO, spacing=0, expand=True)
+    ], scroll=ft.ScrollMode.auto, spacing=0, expand=True)
+

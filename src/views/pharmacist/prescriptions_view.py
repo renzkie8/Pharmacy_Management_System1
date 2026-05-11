@@ -125,7 +125,7 @@ def PrescriptionsView():
                         padding=ft.padding.symmetric(horizontal=12, vertical=6),
                         border_radius=15,
                     ),
-                ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
+                ], alignment=ft.MainAxisAlignment.space_between),
                 
                 ft.Divider(height=10),
                 
@@ -261,7 +261,7 @@ def PrescriptionsView():
                         ft.Icon(ft.icons.SEARCH_OFF, size=80, color="outline"),
                         ft.Text("No prescriptions found", size=18, color="outline"),
                         ft.Text("Try adjusting your filters", size=14, color="outline"),
-                    ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
+                    ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=10),
                     padding=50,
                     alignment=ft.alignment.center,
                 )
@@ -308,4 +308,5 @@ def PrescriptionsView():
             ], spacing=0),
             padding=20,
         ),
-    ], scroll=ft.ScrollMode.AUTO, spacing=0)
+    ], scroll=ft.ScrollMode.auto, spacing=0)
+

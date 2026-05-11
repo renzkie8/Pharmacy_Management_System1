@@ -44,7 +44,7 @@ def HelpDeskView():
                         bgcolor="secondary", width=20, height=20, border_radius=10, alignment=ft.alignment.center
                     ),
                     ft.Text(step, size=13, expand=True)
-                ], vertical_alignment=ft.CrossAxisAlignment.START) for i, step in enumerate(steps)]
+                ], vertical_alignment=ft.CrossAxisAlignment.start) for i, step in enumerate(steps)]
             ], spacing=8),
             padding=20,
             bgcolor="surface",
@@ -61,7 +61,7 @@ def HelpDeskView():
                 ft.Text(role, weight="bold", size=14),
                 ft.Text(email, size=12, color="outline"),
                 ft.Text(f"Ext: {ext}", size=12, weight="bold", color="secondary"),
-            ], horizontal_alignment=ft.CrossAxisAlignment.CENTER),
+            ], horizontal_alignment=ft.CrossAxisAlignment.center),
             padding=20,
             bgcolor="surface",
             border_radius=12,
@@ -95,7 +95,7 @@ def HelpDeskView():
                         "Direct medical Qs to Pharmacist",
                         "Be polite!"
                     ]),
-                ], alignment=ft.MainAxisAlignment.START, vertical_alignment=ft.CrossAxisAlignment.START),
+                ], alignment=ft.MainAxisAlignment.start, vertical_alignment=ft.CrossAxisAlignment.start),
                 
                 ft.Container(height=30),
                 
@@ -127,4 +127,5 @@ def HelpDeskView():
                 )
             ])
         )
-    ], scroll=ft.ScrollMode.AUTO, spacing=0)
+    ], scroll=ft.ScrollMode.auto, spacing=0)
+
