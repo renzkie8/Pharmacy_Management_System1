@@ -29,5 +29,6 @@ This is the final checklist for our **Cloud Computing (CSEC 3)** project. Let's 
 - [ ] **Clean Up Root**: Only `README.md`, `CHANGELOG.md`, `app.py`, and your main HTML files should be in the root. Move everything else into the folders above.
 
 ---
-**Team**: Carl Renz M. Colico & Francis Gabriel Nonato
+**Team Member 1**: Carl Renz M. Colico 
+**Team Member 2**: Francis Gabriel Nonato
 **Status**: 95% Complete! 🚀
