@@ -14,14 +14,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [Carl Renz M. Colico & Francis Gabriel Nonato] - Configured App Service "Scale Out" to 2 instances for High Availability (Optimization 2).
 - [ Francis Gabriel Nonato] - Established professional repository structure (`/diagram`, `/deployment`, `/report`).
 - [Carl Renz M. Colico] - Implemented Security Optimization 3: Migrated credentials to environment variables.
-- [ Francis Gabriel Nonato] - Implemented Optimization 4: Integrated Azure Blob Storage for static asset offloading.
 - [Carl Renz M. Colico] - Added `/health` monitoring endpoint for Azure App Service observability.
 
 ### Changed
-- [Carl Renz M. Colico ] - Migrated project from Pharmacy Management System to SimpliShop (Static Web App).
+- [Francis Gabriel Nonato ] - Migrated project from Pharmacy Management System to SimpliShop (Static Web App).
 - [ Francis Gabriel Nonato] - Created Azure App Service `SimpliShop-System` on Python 3.11 runtime.
 - [Carl Renz M. Colico ] - Implemented FastAPI `app.py` to serve static content and database APIs.
-- [Carl Renz M. Colico & Francis Gabriel Nonato] - Established GitHub Actions CI/CD pipeline (Optimization 1).
+- [Carl Renz M. Colico ] - Established GitHub Actions CI/CD pipeline .
 - [ Francis Gabriel Nonato] - Updated frontend JavaScript to utilize real-time Fetch API calls to Azure SQL.
 
 ### Fixed

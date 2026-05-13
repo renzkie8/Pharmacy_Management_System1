@@ -13,10 +13,9 @@ The following estimates are based on the Azure Pricing Calculator for the **Sout
 | :--- | :--- | :--- |
 | **App Service Plan** | Basic (B1) - 2 Instances (High Availability) | ~$13.14 (per instance) |
 | **Azure SQL Database** | Basic Tier (5 DTUs, 2GB Storage) | ~$4.90 |
-| **Azure Storage** | Blob Storage (LRS) - ~1GB | ~$0.05 |
 | **Bandwidth/Networking** | First 5GB free | $0.00 |
 | **GitHub Actions** | Free for public repositories | $0.00 |
-| **TOTAL** | | **~$31.23 USD** |
+| **TOTAL** | | **~$31.18 USD** |
 
 ## 3. Cost Optimization Notes
 To further reduce costs for the SimpliShop platform, we could implement the following:

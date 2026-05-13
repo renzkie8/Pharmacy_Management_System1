@@ -22,7 +22,6 @@ graph TD
 
         subgraph "Data & Storage Layer"
             SQL[Azure SQL Database<br/>SimpliShopDB]
-            Storage[Azure Blob Storage<br/>Static Assets/Images]
         end
 
         subgraph "Security"
@@ -37,8 +36,6 @@ graph TD
     WebApp --> Inst2
     Inst1 -->|Query| SQL
     Inst2 -->|Query| SQL
-    Inst1 -->|Retrieve| Storage
-    Inst2 -->|Retrieve| Storage
     Env -->|Provide Secrets| Inst1
     Env -->|Provide Secrets| Inst2
     
@@ -46,7 +43,6 @@ graph TD
 ```
 
 ## Key Architectural Principles Applied:
-1.  **Separation of Concerns**: Static assets are offloaded to Azure Storage, while logic is handled by App Service.
-2.  **High Availability**: Deployed across multiple instances (Scale-out).
-3.  **Security by Design**: Credentials are never stored in code; they are managed via Azure App Service configuration.
-4.  **Automation**: Full CI/CD lifecycle using GitHub Actions.
+1.  **High Availability**: Deployed across multiple instances (Scale-out).
+2.  **Security by Design**: Credentials are never stored in code; they are managed via Azure App Service configuration.
+3.  **Automation**: Full CI/CD lifecycle using GitHub Actions.
