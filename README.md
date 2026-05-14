@@ -3,7 +3,7 @@
 **Course**: CSEC 3 – Cloud Computing  
 **Team**: Carl Renz M. Colico & Francis Gabriel Nonato  
 **Live Demo**: [https://simplishop-system-e5gedhdsbacjbmcn.southeastasia-01.azurewebsites.net](https://simplishop-system-e5gedhdsbacjbmcn.southeastasia-01.azurewebsites.net)  
-**Video Presentation**: [YouTube Link Placeholder]  
+**Video Presentation**: [https://youtu.be/8Vg4l9rGtW8]  
 
 ---
 
